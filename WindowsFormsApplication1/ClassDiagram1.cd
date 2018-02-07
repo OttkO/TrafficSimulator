@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="WindowsFormsApplication1.Car">
+    <Position X="9.25" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAgAAAAAgAAAAEAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.TrafficLight">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAIAAAAAAEAgAAAAAAAAAgAEMAAA=</HashCode>
+      <FileName>TrafficLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.PCrossroad">
+    <Position X="4.5" Y="6.75" Width="1.25" />
+    <AssociationLine Name="TrafficlightP" Type="WindowsFormsApplication1.TrafficlightP" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="7.312" />
+        <Point X="2" Y="7.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQAAA=</HashCode>
+      <FileName>PCrossroad.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TrafficlightP" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.CCrossroad">
+    <Position X="6" Y="6.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CCrossroad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Simulator">
+    <Position X="3.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAGAAAQAAAgEAQAgAIYAAAQAAAACgAAAAAAQ=</HashCode>
+      <FileName>Simulator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Roads" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.TrafficlightP">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrafficlightP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.TrafficlightC">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrafficlightC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Straight">
+    <Position X="7.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StraightS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Curve">
+    <Position X="9.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CurveS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Road">
+    <Position X="6" Y="0.75" Width="1.75" />
+    <AssociationLine Name="ConnectedRoads" Type="WindowsFormsApplication1.Road" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.292" Y="0.75" />
+        <Point X="6.292" Y="0.5" />
+        <Point X="7.458" Y="0.5" />
+        <Point X="7.458" Y="0.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Lane" Type="WindowsFormsApplication1.Lane" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="3.53" />
+        <Point X="9.25" Y="3.53" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAEAAAwgAAAAoAAAAMAAAABAAAQAAAAAAAAA=</HashCode>
+      <FileName>Road.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ConnectedRoads" />
+      <Property Name="Lane" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Lane">
+    <Position X="9.25" Y="3" Width="1.75" />
+    <AssociationLine Name="ConnectedLane1" Type="WindowsFormsApplication1.Lane" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="3.777" />
+        <Point X="12.292" Y="3.777" />
+        <Point X="12.292" Y="5.683" />
+        <Point X="11" Y="5.683" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ConnectedLane2" Type="WindowsFormsApplication1.Lane" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="3.352" />
+        <Point X="12.717" Y="3.352" />
+        <Point X="12.717" Y="6.106" />
+        <Point X="11" Y="6.106" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="TrafficlightC" Type="WindowsFormsApplication1.TrafficlightC" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.25" Y="5.793" />
+        <Point X="6.958" Y="5.793" Type="JumpStart" />
+        <Point X="6.792" Y="5.793" Type="JumpEnd" />
+        <Point X="4.5" Y="5.793" />
+        <Point X="4.5" Y="5.5" />
+        <Point X="4.062" Y="5.5" />
+        <Point X="4.062" Y="5.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAACAAAAAIDCAAJAAAAAQAAAAAAAAEQAAAAEAAI=</HashCode>
+      <FileName>Lane.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cars" />
+      <Property Name="ConnectedLane1" />
+      <Property Name="ConnectedLane2" />
+      <Property Name="TrafficlightC" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
