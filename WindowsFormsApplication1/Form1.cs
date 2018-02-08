@@ -14,8 +14,8 @@ namespace tracy
     
     public partial class Tracy : Form
     {
-      
-        public bool Start = false;
+
+        private bool start = false;
         private int roadId = 0;
         Simulator simu;
         Bitmap bmGridRoad = new Bitmap(1060, 910);
@@ -28,6 +28,9 @@ namespace tracy
         private int[] justPlaced;
         private Point selected;
         private PictureBox pb;
+
+        public bool Start { get => start; set => start = value; }
+
         public Tracy()
         {
 

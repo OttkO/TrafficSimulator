@@ -58,24 +58,24 @@ namespace tracy
 
 
 
-            this.lanes[0].trafficLight.position = new Point(coordinates.X + 25, coordinates.Y + 27);
-            this.lanes[0].trafficLight.CPost = coordinates;
-            this.lanes[1].trafficLight.position = new Point(coordinates.X + 35, coordinates.Y + 27);
-            this.lanes[1].trafficLight.CPost = coordinates;
-            this.lanes[3].trafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 30);
-            this.lanes[3].trafficLight.CPost = coordinates;
-            this.lanes[4].trafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 40);
-            this.lanes[4].trafficLight.CPost = coordinates;
+            this.lanes[0].TrafficLight.position = new Point(coordinates.X + 25, coordinates.Y + 27);
+            this.lanes[0].TrafficLight.CPost = coordinates;
+            this.lanes[1].TrafficLight.position = new Point(coordinates.X + 35, coordinates.Y + 27);
+            this.lanes[1].TrafficLight.CPost = coordinates;
+            this.lanes[3].TrafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 30);
+            this.lanes[3].TrafficLight.CPost = coordinates;
+            this.lanes[4].TrafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 40);
+            this.lanes[4].TrafficLight.CPost = coordinates;
 
-            this.lanes[6].trafficLight.position = new Point(coordinates.X + 110, coordinates.Y + 100);
-            this.lanes[6].trafficLight.CPost = coordinates;
-            this.lanes[7].trafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 100);
-            this.lanes[7].trafficLight.CPost = coordinates;
+            this.lanes[6].TrafficLight.position = new Point(coordinates.X + 110, coordinates.Y + 100);
+            this.lanes[6].TrafficLight.CPost = coordinates;
+            this.lanes[7].TrafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 100);
+            this.lanes[7].TrafficLight.CPost = coordinates;
 
-            this.lanes[9].trafficLight.position = new Point(coordinates.X + 26, coordinates.Y + 110);
-            this.lanes[9].trafficLight.CPost = coordinates;
-            this.lanes[10].trafficLight.position = new Point(coordinates.X + 26, coordinates.Y + 100);
-            this.lanes[10].trafficLight.CPost = coordinates;
+            this.lanes[9].TrafficLight.position = new Point(coordinates.X + 26, coordinates.Y + 110);
+            this.lanes[9].TrafficLight.CPost = coordinates;
+            this.lanes[10].TrafficLight.position = new Point(coordinates.X + 26, coordinates.Y + 100);
+            this.lanes[10].TrafficLight.CPost = coordinates;
 
             this.changeSpawnability("N", true);
             this.changeSpawnability("E", true);
@@ -88,64 +88,64 @@ namespace tracy
             int r = rand.Next(0, 4);
             if (r == 0)
             {
-                this.lanes[0].trafficLight.Colour = 3;
-                this.lanes[1].trafficLight.Colour = 3;
-                this.lanes[3].trafficLight.Colour = 3;
-                this.lanes[0].trafficLight.Timer = 10;
-                this.lanes[4].trafficLight.Timer = 20;
-                this.lanes[6].trafficLight.Timer = 10;
-                this.lanes[7].trafficLight.Timer = 10;
+                this.lanes[0].TrafficLight.Colour = 3;
+                this.lanes[1].TrafficLight.Colour = 3;
+                this.lanes[3].TrafficLight.Colour = 3;
+                this.lanes[0].TrafficLight.Timer = 10;
+                this.lanes[4].TrafficLight.Timer = 20;
+                this.lanes[6].TrafficLight.Timer = 10;
+                this.lanes[7].TrafficLight.Timer = 10;
 
             }
             else if (r == 1)
             {
-                this.lanes[3].trafficLight.Colour = 3;
-                this.lanes[4].trafficLight.Colour = 3;
-                this.lanes[6].trafficLight.Colour = 3;
-                this.lanes[3].trafficLight.Timer = 10;
-                this.lanes[7].trafficLight.Timer = 20;
-                this.lanes[9].trafficLight.Timer = 10;
-                this.lanes[10].trafficLight.Timer = 10;
+                this.lanes[3].TrafficLight.Colour = 3;
+                this.lanes[4].TrafficLight.Colour = 3;
+                this.lanes[6].TrafficLight.Colour = 3;
+                this.lanes[3].TrafficLight.Timer = 10;
+                this.lanes[7].TrafficLight.Timer = 20;
+                this.lanes[9].TrafficLight.Timer = 10;
+                this.lanes[10].TrafficLight.Timer = 10;
             }
             else if (r == 2)
             {
-                this.lanes[6].trafficLight.Colour = 3;
-                this.lanes[7].trafficLight.Colour = 3;
-                this.lanes[9].trafficLight.Colour = 3;
-                this.lanes[6].trafficLight.Timer = 10;
-                this.lanes[10].trafficLight.Timer = 20;
-                this.lanes[0].trafficLight.Timer = 10;
-                this.lanes[1].trafficLight.Timer = 10;
+                this.lanes[6].TrafficLight.Colour = 3;
+                this.lanes[7].TrafficLight.Colour = 3;
+                this.lanes[9].TrafficLight.Colour = 3;
+                this.lanes[6].TrafficLight.Timer = 10;
+                this.lanes[10].TrafficLight.Timer = 20;
+                this.lanes[0].TrafficLight.Timer = 10;
+                this.lanes[1].TrafficLight.Timer = 10;
             }
             else
             {
-                this.lanes[9].trafficLight.Colour = 3;
-                this.lanes[10].trafficLight.Colour = 3;
-                this.lanes[0].trafficLight.Colour = 3;
-                this.lanes[9].trafficLight.Timer = 10;
-                this.lanes[1].trafficLight.Timer = 20;
-                this.lanes[3].trafficLight.Timer = 10;
-                this.lanes[4].trafficLight.Timer = 10;
+                this.lanes[9].TrafficLight.Colour = 3;
+                this.lanes[10].TrafficLight.Colour = 3;
+                this.lanes[0].TrafficLight.Colour = 3;
+                this.lanes[9].TrafficLight.Timer = 10;
+                this.lanes[1].TrafficLight.Timer = 20;
+                this.lanes[3].TrafficLight.Timer = 10;
+                this.lanes[4].TrafficLight.Timer = 10;
             }
 
 
-            this.lanes[0].trafficLight.greenInterval = 20;
-            this.lanes[1].trafficLight.greenInterval = 10;
-            this.lanes[3].trafficLight.greenInterval = 20;
-            this.lanes[4].trafficLight.greenInterval = 10;
-            this.lanes[6].trafficLight.greenInterval = 20;
-            this.lanes[7].trafficLight.greenInterval = 10;
-            this.lanes[9].trafficLight.greenInterval = 20;
-            this.lanes[10].trafficLight.greenInterval = 10;
+            this.lanes[0].TrafficLight.greenInterval = 20;
+            this.lanes[1].TrafficLight.greenInterval = 10;
+            this.lanes[3].TrafficLight.greenInterval = 20;
+            this.lanes[4].TrafficLight.greenInterval = 10;
+            this.lanes[6].TrafficLight.greenInterval = 20;
+            this.lanes[7].TrafficLight.greenInterval = 10;
+            this.lanes[9].TrafficLight.greenInterval = 20;
+            this.lanes[10].TrafficLight.greenInterval = 10;
 
-            this.lanes[0].trafficLight.redInterval = 20;
-            this.lanes[1].trafficLight.redInterval = 30;
-            this.lanes[3].trafficLight.redInterval = 20;
-            this.lanes[4].trafficLight.redInterval = 30;
-            this.lanes[6].trafficLight.redInterval = 20;
-            this.lanes[7].trafficLight.redInterval = 30;
-            this.lanes[9].trafficLight.redInterval = 20;
-            this.lanes[10].trafficLight.redInterval = 30;
+            this.lanes[0].TrafficLight.redInterval = 20;
+            this.lanes[1].TrafficLight.redInterval = 30;
+            this.lanes[3].TrafficLight.redInterval = 20;
+            this.lanes[4].TrafficLight.redInterval = 30;
+            this.lanes[6].TrafficLight.redInterval = 20;
+            this.lanes[7].TrafficLight.redInterval = 30;
+            this.lanes[9].TrafficLight.redInterval = 20;
+            this.lanes[10].TrafficLight.redInterval = 30;
 
 
             //Connect all inside lane here  
@@ -741,7 +741,7 @@ namespace tracy
             int[] id = { 0, 1, 3, 4, 6, 7, 9, 10 };
             for (int i = 0; i < id.Length; i++)
             {
-                this.lanes[id[i]].trafficLight.Draw(ref gr);
+                this.lanes[id[i]].TrafficLight.Draw(ref gr);
             }
         }
 
@@ -750,36 +750,36 @@ namespace tracy
             int[] id = { 0, 1, 3, 4, 6, 7, 9, 10 };
             for (int i = 0; i < id.Length; i++)
             {
-                if (this.lanes[id[i]].trafficLight.ColorChanged==true)
+                if (this.lanes[id[i]].TrafficLight.ColorChanged==true)
                 {
-                    this.lanes[id[i]].trafficLight.Draw(ref gr);
-                    this.lanes[id[i]].trafficLight.ColorChanged = false;
+                    this.lanes[id[i]].TrafficLight.Draw(ref gr);
+                    this.lanes[id[i]].TrafficLight.ColorChanged = false;
                 }
             }
         }
 
         public void incTimer(object sender, EventArgs e)
         {
-            this.lanes[0].trafficLight.IncTimer();
-            this.lanes[1].trafficLight.IncTimer();
-            this.lanes[3].trafficLight.IncTimer();
-            this.lanes[4].trafficLight.IncTimer();
-            this.lanes[6].trafficLight.IncTimer();
-            this.lanes[7].trafficLight.IncTimer();
-            this.lanes[9].trafficLight.IncTimer();
-            this.lanes[10].trafficLight.IncTimer();
+            this.lanes[0].TrafficLight.IncTimer();
+            this.lanes[1].TrafficLight.IncTimer();
+            this.lanes[3].TrafficLight.IncTimer();
+            this.lanes[4].TrafficLight.IncTimer();
+            this.lanes[6].TrafficLight.IncTimer();
+            this.lanes[7].TrafficLight.IncTimer();
+            this.lanes[9].TrafficLight.IncTimer();
+            this.lanes[10].TrafficLight.IncTimer();
         }
 
         public void adjustGreenTime(int Green)
         {
-            this.lanes[0].trafficLight.AdjustGreenTime(Green * 2);
-            this.lanes[1].trafficLight.AdjustGreenTime(Green);
-            this.lanes[3].trafficLight.AdjustGreenTime(Green * 2);
-            this.lanes[4].trafficLight.AdjustGreenTime(Green);
-            this.lanes[6].trafficLight.AdjustGreenTime(Green * 2);
-            this.lanes[7].trafficLight.AdjustGreenTime(Green);
-            this.lanes[9].trafficLight.AdjustGreenTime(Green * 2);
-            this.lanes[10].trafficLight.AdjustGreenTime(Green);
+            this.lanes[0].TrafficLight.AdjustGreenTime(Green * 2);
+            this.lanes[1].TrafficLight.AdjustGreenTime(Green);
+            this.lanes[3].TrafficLight.AdjustGreenTime(Green * 2);
+            this.lanes[4].TrafficLight.AdjustGreenTime(Green);
+            this.lanes[6].TrafficLight.AdjustGreenTime(Green * 2);
+            this.lanes[7].TrafficLight.AdjustGreenTime(Green);
+            this.lanes[9].TrafficLight.AdjustGreenTime(Green * 2);
+            this.lanes[10].TrafficLight.AdjustGreenTime(Green);
         }
 
         public override void RemoveLanes()
@@ -797,83 +797,83 @@ namespace tracy
             int r = rand.Next(0, 4);
             if (r == 0)
             {
-                this.lanes[0].trafficLight.Colour = 3;
-                this.lanes[1].trafficLight.Colour = 3;
-                this.lanes[3].trafficLight.Colour = 3;
-                this.lanes[0].trafficLight.Timer = this.lanes[0].trafficLight.greenInterval / 2;
-                this.lanes[4].trafficLight.Timer = this.lanes[4].trafficLight.greenInterval * 2;
-                this.lanes[6].trafficLight.Timer = this.lanes[6].trafficLight.greenInterval / 2;
-                this.lanes[7].trafficLight.Timer = this.lanes[7].trafficLight.greenInterval;
+                this.lanes[0].TrafficLight.Colour = 3;
+                this.lanes[1].TrafficLight.Colour = 3;
+                this.lanes[3].TrafficLight.Colour = 3;
+                this.lanes[0].TrafficLight.Timer = this.lanes[0].TrafficLight.greenInterval / 2;
+                this.lanes[4].TrafficLight.Timer = this.lanes[4].TrafficLight.greenInterval * 2;
+                this.lanes[6].TrafficLight.Timer = this.lanes[6].TrafficLight.greenInterval / 2;
+                this.lanes[7].TrafficLight.Timer = this.lanes[7].TrafficLight.greenInterval;
 
-                this.lanes[4].trafficLight.Colour = 1;
-                this.lanes[6].trafficLight.Colour = 1;
-                this.lanes[7].trafficLight.Colour = 1;
-                this.lanes[9].trafficLight.Colour = 1;
-                this.lanes[10].trafficLight.Colour = 1;
-                this.lanes[1].trafficLight.Timer = 0;
-                this.lanes[3].trafficLight.Timer = 0;
-                this.lanes[9].trafficLight.Timer = 0;
-                this.lanes[10].trafficLight.Timer = 0;
+                this.lanes[4].TrafficLight.Colour = 1;
+                this.lanes[6].TrafficLight.Colour = 1;
+                this.lanes[7].TrafficLight.Colour = 1;
+                this.lanes[9].TrafficLight.Colour = 1;
+                this.lanes[10].TrafficLight.Colour = 1;
+                this.lanes[1].TrafficLight.Timer = 0;
+                this.lanes[3].TrafficLight.Timer = 0;
+                this.lanes[9].TrafficLight.Timer = 0;
+                this.lanes[10].TrafficLight.Timer = 0;
             }
             else if (r == 1)
             {
-                this.lanes[3].trafficLight.Colour = 3;
-                this.lanes[4].trafficLight.Colour = 3;
-                this.lanes[6].trafficLight.Colour = 3;
-                this.lanes[3].trafficLight.Timer = this.lanes[3].trafficLight.greenInterval / 2;
-                this.lanes[7].trafficLight.Timer = this.lanes[7].trafficLight.greenInterval * 2;
-                this.lanes[9].trafficLight.Timer = this.lanes[9].trafficLight.greenInterval / 2;
-                this.lanes[10].trafficLight.Timer = this.lanes[10].trafficLight.greenInterval;
+                this.lanes[3].TrafficLight.Colour = 3;
+                this.lanes[4].TrafficLight.Colour = 3;
+                this.lanes[6].TrafficLight.Colour = 3;
+                this.lanes[3].TrafficLight.Timer = this.lanes[3].TrafficLight.greenInterval / 2;
+                this.lanes[7].TrafficLight.Timer = this.lanes[7].TrafficLight.greenInterval * 2;
+                this.lanes[9].TrafficLight.Timer = this.lanes[9].TrafficLight.greenInterval / 2;
+                this.lanes[10].TrafficLight.Timer = this.lanes[10].TrafficLight.greenInterval;
 
-                this.lanes[0].trafficLight.Colour = 1;
-                this.lanes[1].trafficLight.Colour = 1;
-                this.lanes[7].trafficLight.Colour = 1;
-                this.lanes[9].trafficLight.Colour = 1;
-                this.lanes[10].trafficLight.Colour = 1;
-                this.lanes[0].trafficLight.Timer = 0;
-                this.lanes[1].trafficLight.Timer = 0;
-                this.lanes[4].trafficLight.Timer = 0;
-                this.lanes[6].trafficLight.Timer = 0;
+                this.lanes[0].TrafficLight.Colour = 1;
+                this.lanes[1].TrafficLight.Colour = 1;
+                this.lanes[7].TrafficLight.Colour = 1;
+                this.lanes[9].TrafficLight.Colour = 1;
+                this.lanes[10].TrafficLight.Colour = 1;
+                this.lanes[0].TrafficLight.Timer = 0;
+                this.lanes[1].TrafficLight.Timer = 0;
+                this.lanes[4].TrafficLight.Timer = 0;
+                this.lanes[6].TrafficLight.Timer = 0;
             }
             else if (r == 2)
             {
-                this.lanes[6].trafficLight.Colour = 3;
-                this.lanes[7].trafficLight.Colour = 3;
-                this.lanes[9].trafficLight.Colour = 3;
-                this.lanes[6].trafficLight.Timer = this.lanes[6].trafficLight.greenInterval / 2;
-                this.lanes[10].trafficLight.Timer = this.lanes[10].trafficLight.greenInterval * 2;
-                this.lanes[0].trafficLight.Timer = this.lanes[0].trafficLight.greenInterval / 2;
-                this.lanes[1].trafficLight.Timer = this.lanes[1].trafficLight.greenInterval;
+                this.lanes[6].TrafficLight.Colour = 3;
+                this.lanes[7].TrafficLight.Colour = 3;
+                this.lanes[9].TrafficLight.Colour = 3;
+                this.lanes[6].TrafficLight.Timer = this.lanes[6].TrafficLight.greenInterval / 2;
+                this.lanes[10].TrafficLight.Timer = this.lanes[10].TrafficLight.greenInterval * 2;
+                this.lanes[0].TrafficLight.Timer = this.lanes[0].TrafficLight.greenInterval / 2;
+                this.lanes[1].TrafficLight.Timer = this.lanes[1].TrafficLight.greenInterval;
 
-                this.lanes[0].trafficLight.Colour = 1;
-                this.lanes[1].trafficLight.Colour = 1;
-                this.lanes[3].trafficLight.Colour = 1;
-                this.lanes[4].trafficLight.Colour = 1;
-                this.lanes[10].trafficLight.Colour = 1;
-                this.lanes[3].trafficLight.Timer = 0;
-                this.lanes[4].trafficLight.Timer = 0;
-                this.lanes[7].trafficLight.Timer = 0;
-                this.lanes[9].trafficLight.Timer = 0;
+                this.lanes[0].TrafficLight.Colour = 1;
+                this.lanes[1].TrafficLight.Colour = 1;
+                this.lanes[3].TrafficLight.Colour = 1;
+                this.lanes[4].TrafficLight.Colour = 1;
+                this.lanes[10].TrafficLight.Colour = 1;
+                this.lanes[3].TrafficLight.Timer = 0;
+                this.lanes[4].TrafficLight.Timer = 0;
+                this.lanes[7].TrafficLight.Timer = 0;
+                this.lanes[9].TrafficLight.Timer = 0;
             }
             else
             {
-                this.lanes[9].trafficLight.Colour = 3;
-                this.lanes[10].trafficLight.Colour = 3;
-                this.lanes[0].trafficLight.Colour = 3;
-                this.lanes[9].trafficLight.Timer = this.lanes[9].trafficLight.greenInterval / 2;
-                this.lanes[1].trafficLight.Timer = this.lanes[1].trafficLight.greenInterval * 2;
-                this.lanes[3].trafficLight.Timer = this.lanes[3].trafficLight.greenInterval / 2;
-                this.lanes[4].trafficLight.Timer = this.lanes[4].trafficLight.greenInterval;
+                this.lanes[9].TrafficLight.Colour = 3;
+                this.lanes[10].TrafficLight.Colour = 3;
+                this.lanes[0].TrafficLight.Colour = 3;
+                this.lanes[9].TrafficLight.Timer = this.lanes[9].TrafficLight.greenInterval / 2;
+                this.lanes[1].TrafficLight.Timer = this.lanes[1].TrafficLight.greenInterval * 2;
+                this.lanes[3].TrafficLight.Timer = this.lanes[3].TrafficLight.greenInterval / 2;
+                this.lanes[4].TrafficLight.Timer = this.lanes[4].TrafficLight.greenInterval;
 
-                this.lanes[1].trafficLight.Colour = 1;
-                this.lanes[3].trafficLight.Colour = 1;
-                this.lanes[4].trafficLight.Colour = 1;
-                this.lanes[6].trafficLight.Colour = 1;
-                this.lanes[7].trafficLight.Colour = 1;
-                this.lanes[0].trafficLight.Timer = 0;
-                this.lanes[6].trafficLight.Timer = 0;
-                this.lanes[7].trafficLight.Timer = 0;
-                this.lanes[10].trafficLight.Timer = 0;
+                this.lanes[1].TrafficLight.Colour = 1;
+                this.lanes[3].TrafficLight.Colour = 1;
+                this.lanes[4].TrafficLight.Colour = 1;
+                this.lanes[6].TrafficLight.Colour = 1;
+                this.lanes[7].TrafficLight.Colour = 1;
+                this.lanes[0].TrafficLight.Timer = 0;
+                this.lanes[6].TrafficLight.Timer = 0;
+                this.lanes[7].TrafficLight.Timer = 0;
+                this.lanes[10].TrafficLight.Timer = 0;
             }
 
         }

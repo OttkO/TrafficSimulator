@@ -25,7 +25,7 @@ namespace tracy
 
 
         //Traffic stuff
-        public TrafficLightC trafficLight;
+        private TrafficLightC trafficLight;
         private List<Lane> ConnectedLanes;
         private List<Car> Cars;
         private List<Car> CarsInQueue;
@@ -297,7 +297,7 @@ namespace tracy
 
             if (hasLight)
             {
-                trafficLight = new TrafficLightC(5, new Point(1, 1));
+                TrafficLight = new TrafficLightC(5, new Point(1, 1));
             }
         }
         public void ClearCarList()
@@ -904,7 +904,7 @@ namespace tracy
             }
             if (hasLight)
             {
-                trafficLight = new TrafficLightC(5, new Point(1, 1));
+                TrafficLight = new TrafficLightC(5, new Point(1, 1));
             }
         }
 
@@ -1022,13 +1022,13 @@ namespace tracy
                 //if first car is at last postion
                 if (Cars[i].Coordinates == this.Positions[numberOfPositions - 1])
                 {
-                    if (trafficLight == null)
+                    if (TrafficLight == null)
                     {
                         //there's no light so, just move to next
                         ChangeCarToNextLane(Cars[i]);
                     }
                     //if trafficLight is present and is green then change To next lane
-                    else if (trafficLight.Colour == 3)
+                    else if (TrafficLight.Colour == 3)
                     {
                         ChangeCarToNextLane(Cars[i]);
                     }
@@ -1041,7 +1041,7 @@ namespace tracy
                 }
                 try
                 {
-                    if ((positionIndex + 7 + Cars[i].speed) >= Positions.Length) { continue; }
+                    if ((positionIndex + 7 + Cars[i].Speed) >= Positions.Length) { continue; }
                 }
                 catch
                 {
@@ -1062,13 +1062,13 @@ namespace tracy
                                        Cars[i - 1].Coordinates == Positions[positionIndex + 9] ||
                                        Cars[i - 1].Coordinates == Positions[positionIndex + 10] ||
                                        Cars[i - 1].Coordinates == Positions[positionIndex + 11] ||
-                                      Cars[i - 1].Coordinates == Positions[positionIndex + 1 + Cars[i].speed]
-                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 2 + Cars[i].speed]
-                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 3 + Cars[i].speed]
-                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 4 + Cars[i].speed]
-                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 5 + Cars[i].speed]
-                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 6 + Cars[i].speed]
-                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 7 + Cars[i].speed]
+                                      Cars[i - 1].Coordinates == Positions[positionIndex + 1 + Cars[i].Speed]
+                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 2 + Cars[i].Speed]
+                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 3 + Cars[i].Speed]
+                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 4 + Cars[i].Speed]
+                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 5 + Cars[i].Speed]
+                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 6 + Cars[i].Speed]
+                                      || Cars[i - 1].Coordinates == Positions[positionIndex + 7 + Cars[i].Speed]
                                       ))
                     {
                         //method check for collision or something
@@ -1132,7 +1132,7 @@ namespace tracy
                          Cars[i - 1].Coordinates == Positions[positionIndex + 6]))
                     {
 
-                        while (Cars[i].speed == 1)
+                        while (Cars[i].Speed == 1)
                         {
                             Cars[i].decellerate();
                         }
@@ -1141,15 +1141,15 @@ namespace tracy
 
                     else
                     {
-                        if (Cars[i].speed <= Cars[i].cruiseSpeed)
+                        if (Cars[i].Speed <= Cars[i].CruiseSpeed)
                         {
                             Cars[i].accelerate();
                         }
                     }
 
-                    if (((j + Cars[i].speed) < Positions.Length) && (cycles == 2))
+                    if (((j + Cars[i].Speed) < Positions.Length) && (cycles == 2))
                     {
-                        Cars[i].Coordinates = Positions[j + Cars[i].speed]; cycles = 0;
+                        Cars[i].Coordinates = Positions[j + Cars[i].Speed]; cycles = 0;
                     }
                     else
                     {
@@ -1167,6 +1167,8 @@ namespace tracy
             get { return this.moveTimer;}
 
         }
+
+        public TrafficLightC TrafficLight { get => trafficLight; set => trafficLight = value; }
 
         /// <summary>
         /// Return number of cars in the cars list.

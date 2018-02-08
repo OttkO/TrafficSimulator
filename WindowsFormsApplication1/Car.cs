@@ -12,8 +12,8 @@ namespace tracy
 {
     public class Car
     {
-        public int cruiseSpeed;
-        public int speed;
+        private int cruiseSpeed;
+        private int speed;
         private Point coordinates;
         int color;
         //int angle;
@@ -24,8 +24,8 @@ namespace tracy
 
             Random r = new Random();
 
-            cruiseSpeed = r.Next(1, 5);
-            speed = cruiseSpeed;
+            CruiseSpeed = r.Next(1, 5);
+            Speed = CruiseSpeed;
             coordinates = startV;
             color = r.Next(0, 4);
 
@@ -37,6 +37,8 @@ namespace tracy
             set { this.coordinates = value; }
         }
 
+        public int CruiseSpeed { get => cruiseSpeed; set => cruiseSpeed = value; }
+        public int Speed { get => speed; set => speed = value; }
 
         public void Draw(ref Graphics gr)
         {
@@ -70,15 +72,15 @@ namespace tracy
 
         public void accelerate()
         {
-            if (cruiseSpeed < speed)
+            if (CruiseSpeed < Speed)
             {
-                speed++;
+                Speed++;
             }
         }
 
         public void decellerate()
         {
-            speed--;
+            Speed--;
         }
 
     }
