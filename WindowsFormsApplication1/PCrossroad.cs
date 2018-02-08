@@ -91,7 +91,7 @@ namespace tracy
                 this.lanes[7].trafficLight.Timer = 10;
                 this.lanes[8].trafficLight.Timer = 10;
             }
-            else if (r == 1)
+            else if (r == 2)
             {
                 this.lanes[5].trafficLight.Colour = 3;
                 this.lanes[6].trafficLight.Timer = 20;
