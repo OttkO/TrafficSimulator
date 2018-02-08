@@ -134,7 +134,6 @@ namespace tracy
 
         private void pictureBox9_MouseDown(object sender, MouseEventArgs e)
         {
-            //MessageBox.Show(e.Location.ToString());
             if (pbGrid.Controls.Contains(txtGrTime))
             {
                 pbGrid.Controls.Remove(txtGrTime);
@@ -331,8 +330,7 @@ namespace tracy
 
         private void panel3_Scroll(object sender, ScrollEventArgs e)
         {
-            //simu.PaintAll(ref pbGrid);
-           
+
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -342,7 +340,7 @@ namespace tracy
 
         private void panelGrid_Resize(object sender, EventArgs e)
         {
-            //simu.PaintAll(ref pbGrid);   
+
         }
 
         private void pbGrid_Paint(object sender, PaintEventArgs e)

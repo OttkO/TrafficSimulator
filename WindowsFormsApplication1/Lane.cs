@@ -58,7 +58,6 @@ namespace tracy
             moveTimer.Interval = 25;
             moveTimer.Tick += this.moveCars;
             this.carLimit = 14;
-            //moveTimer.Tick += this.drawCars();
 
             spawnTimer.Tick += this.SpawnCars;
 
@@ -277,14 +276,12 @@ namespace tracy
                         numberOfPositions += 20;
                         for (int i = 0; i < ((numberOfPositions-10)/ 2) + 10; i++)
                         {
-                            // Positions[i] = new Point(pStart.X - (i * increments), pStart.Y - 5);
                             Positions[i] = new Point(pStart.X, pStart.Y - (i * increments));
 
                         }
 
                         for (int i = ((numberOfPositions - 10) / 2) + 10; i < numberOfPositions; i++)
                         {
-                            // Positions[i] = new Point(pStart.X - (90 * increments), pStart.Y + ((i - 90) * increments));
                             Positions[i] = new Point(pStart.X - (i - 90 * increments), pStart.Y - (90 * increments));
 
                         }
@@ -939,8 +936,7 @@ namespace tracy
             newCar.Coordinates = this.Positions[0];
             //add new car.
             this.Cars.Add(newCar);
-            //link the event witht the event handler.
-            //  Cars.Last<Car>().reachEndOfLane += reachEndOfLaneHandler;
+
         }
 
         /// <summary>

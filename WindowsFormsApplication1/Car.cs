@@ -16,8 +16,6 @@ namespace tracy
         private int speed;
         private Point coordinates;
         int color;
-        //int angle;
-        //string direction;
 
         public Car(Point startV)
         {

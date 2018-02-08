@@ -18,7 +18,6 @@ namespace tracy
             //assign direction, coordinates and images
             //creates list of lane and neighbours
             //Make all spawnable lane spawnable
-            //time = new Timer();
             image = Resource1.CrossC;
             this.lanes = new List<Lane>();
             this.disableTimer();
@@ -213,8 +212,6 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[0] = other;
-                            //this.ConnectLanesTo(side, other);
-                            //this.changeSpawnability("N", false);
                             this.nrOfNeighbours++;
                             return true;
                         }
@@ -233,8 +230,6 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[1] = other;
-                            //this.ConnectLanesTo("E", other);
-                            //this.changeSpawnability("E", false);
                             this.nrOfNeighbours++;
                             return true;
                         }
@@ -253,8 +248,6 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[2] = other;
-                            //this.ConnectLanesTo("S", other);
-                            //this.changeSpawnability("S", false);
                             this.nrOfNeighbours++;
                             return true;
                         }
@@ -273,8 +266,6 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[3] = other;
-                            //this.ConnectLanesTo("W", other);
-                            //this.changeSpawnability("W", false);
                             this.nrOfNeighbours++;
                             return true;
                         }
@@ -287,8 +278,7 @@ namespace tracy
 
                 default:
                     {
-                        return false;
-                        // throw new Exception("Trying to connect to an unrecognized side of the road");                       
+                        return false;              
                     }
             }
         }

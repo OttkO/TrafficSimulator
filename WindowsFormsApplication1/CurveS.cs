@@ -136,7 +136,6 @@ namespace tracy
                                 || (other is PCrossroad))
                             {
                                 connectedRoads[0] = other;
-                                //this.ConnectLanesTo("N", other);
                                 result = true;
                             }
                         }
@@ -149,7 +148,6 @@ namespace tracy
                                 || (other is PCrossroad))
                             {
                                 connectedRoads[1] = other;
-                                //this.ConnectLanesTo("E", other);
                                 result = true;
                             }
                         }
@@ -162,7 +160,6 @@ namespace tracy
                                 || (other is PCrossroad))
                             {
                                 connectedRoads[0] = other;
-                                //this.ConnectLanesTo("S", other);
                                 result = true;
                             }
                         }
@@ -175,15 +172,13 @@ namespace tracy
                                 || (other is PCrossroad))
                             {
                                 connectedRoads[1] = other;
-                                //this.ConnectLanesTo("W", other);
                                 result = true;
                             }
                         }
                         break;
                     default:
                         {
-                            return false;
-                            // throw new Exception("Trying to connect to an unrecognized side of the road");                       
+                            return false;    
                         }
                 }
             }
