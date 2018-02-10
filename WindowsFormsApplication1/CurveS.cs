@@ -28,7 +28,6 @@ namespace tracy
             {
                 case "NE":
                     {
-                        Tracy x = (Tracy)Tracy.ActiveForm;
                         image = Resource1.curveNE;
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 150, Coord.Y + 65), new Point(Coord.X + 85, Coord.Y), direction));
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 65, Coord.Y), new Point(Coord.X + 150, Coord.Y + 85), direction));
@@ -36,7 +35,6 @@ namespace tracy
                     break;
                 case "SE":
                     {
-                        Tracy x = (Tracy)Tracy.ActiveForm;
                         image = Resource1.curveSE;
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 150, Coord.Y + 65), new Point(Coord.X + 65, Coord.Y + 150), direction));
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 85, Coord.Y + 150), new Point(Coord.X + 150, Coord.Y + 85), direction));
@@ -44,7 +42,6 @@ namespace tracy
                     break;
                 case "SW":
                     {
-                        Tracy x = (Tracy)Tracy.ActiveForm;
                         image = Resource1.curveSW;
                         lanes.Add(new Lane(time, false, new Point(Coord.X, Coord.Y + 85), new Point(Coord.X + 65, Coord.Y + 150), direction));
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 85, Coord.Y + 150), new Point(Coord.X, Coord.Y + 35), direction));
@@ -52,7 +49,6 @@ namespace tracy
                     break;
                 case "NW":
                     {
-                        Tracy x = (Tracy)Tracy.ActiveForm;
                         image = Resource1.curveNW;
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 65, Coord.Y), new Point(Coord.X, Coord.Y + 65), direction));
                         lanes.Add(new Lane(time, false, new Point(Coord.X, Coord.Y + 85), new Point(Coord.X + 85, Coord.Y), direction));
@@ -74,33 +70,22 @@ namespace tracy
         private bool directionChecker(string side)
         {
             bool value = false;
-            if (direction == "NE")
+            if (direction == "NE" && (side == "N" || side == "E"))
             {
-                if (side == "N" || side == "E")
-                {
                     value = true;
-                }
             }
-            else if (direction == "NW")
+            else if (direction == "NW" && (side == "N" || side == "W"))
             {
-                if (side == "N" || side == "W")
-                {
                     value = true;
-                }
+
             }
-            else if (direction == "SE")
-            {
-                if (side == "S" || side == "E")
-                {
-                    value = true;
-                }
+            else if (direction == "SE" && (side == "S" || side == "E"))
+            {              
+                    value = true;               
             }
-            else if (direction == "SW")
-            {
-                if (side == "S" || side == "W")
-                {
-                    value = true;
-                }
+            else if (direction == "SW" && (side == "S" || side == "W"))
+            {            
+                    value = true;               
             }
             return value;
         }
@@ -880,9 +865,7 @@ namespace tracy
                         }
                         else if (direction == "NE")
                             this.lanes[1].SpawnAble = spawnAble;
-                        else
-                        {
-                        }
+
                     }
                     break;
                 case "E":
@@ -893,7 +876,6 @@ namespace tracy
                         }
                         else if (direction == "SE")
                             this.lanes[0].SpawnAble = spawnAble;
-                        else { }
                     }
                     break;
                 case "S":
@@ -904,7 +886,6 @@ namespace tracy
                         }
                         else if (direction == "SW")
                             this.lanes[1].SpawnAble = spawnAble;
-                        else { }
                     }
                     break;
                 case "W":
@@ -915,7 +896,6 @@ namespace tracy
                         }
                         else if (direction == "NW")
                             this.lanes[1].SpawnAble = spawnAble;
-                        else { }
                     }
                     break;
 

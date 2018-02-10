@@ -242,8 +242,6 @@
             this.trackBar1.TabIndex = 0;
             this.trackBar1.Value = 5;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
-            this.trackBar1.Validating += new System.ComponentModel.CancelEventHandler(this.trackBar1_Validating);
             // 
             // panelGrid
             // 
@@ -258,8 +256,6 @@
             this.panelGrid.Name = "panelGrid";
             this.panelGrid.Size = new System.Drawing.Size(746, 470);
             this.panelGrid.TabIndex = 2;
-            this.panelGrid.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel3_Scroll);
-            this.panelGrid.Resize += new System.EventHandler(this.panelGrid_Resize);
             // 
             // pbGrid
             // 

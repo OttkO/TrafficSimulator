@@ -328,20 +328,12 @@ namespace tracy
             pbStraightV.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private void panel3_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
             this.roadId = -1;
         }
 
-        private void panelGrid_Resize(object sender, EventArgs e)
-        {
-
-        }
 
         private void pbGrid_Paint(object sender, PaintEventArgs e)
         {
@@ -390,15 +382,6 @@ namespace tracy
             }
         }
 
-        private void trackBar1_Validating(object sender, CancelEventArgs e)
-        {
-            
-        }
-
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
