@@ -114,10 +114,6 @@ namespace tracy
                 pbCCrossroad.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void clearPictureBox()
         {

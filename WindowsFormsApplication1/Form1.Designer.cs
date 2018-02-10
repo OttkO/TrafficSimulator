@@ -265,7 +265,6 @@
             this.pbGrid.Size = new System.Drawing.Size(1050, 900);
             this.pbGrid.TabIndex = 0;
             this.pbGrid.TabStop = false;
-            this.pbGrid.Click += new System.EventHandler(this.pictureBox9_Click);
             this.pbGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pbGrid_Paint);
             this.pbGrid.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox9_MouseDown);
             // 

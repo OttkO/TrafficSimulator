@@ -22,7 +22,7 @@ namespace tracy
             ped.Y = ped.Y + 40;
 
 
-            if ((((lightColor == 3) || (lightColor == 2))))
+            if ((lightColor == 3) || (lightColor == 2))
             {
                 if (place.X < Cplace.X + 75 && place.Y < Cplace.Y + 75)
                 {

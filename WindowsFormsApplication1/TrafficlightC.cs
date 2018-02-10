@@ -19,7 +19,6 @@ namespace tracy
             switch (lightColor)
             {
                 case 1:
-                    //g.DrawImage(x.imageList2.Images[10], base.place);
                     if (place.X < Cplace.X + 75 && place.Y < Cplace.Y + 75)
                     {
                         g.DrawImage(Resource1.RedNorth, place.X, place.Y, 10, 20);

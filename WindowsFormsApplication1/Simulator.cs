@@ -75,8 +75,6 @@ namespace tracy
         /// </summary>
         public void StartSim()
         {
-           // this.masterTimer.Enabled = true;
-            //this.masterTimer.Start();
             for (int i = 0; i < nrOfRows; i++)
             {
                 for (int j = 0; j < nrOfColumns; j++)
@@ -86,8 +84,7 @@ namespace tracy
                         Roads[i,j].startTimer();
                     }            
                 }
-            }
-            
+            } 
         }
 
         /// <summary>

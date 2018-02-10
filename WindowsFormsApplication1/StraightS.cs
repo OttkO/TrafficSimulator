@@ -9,53 +9,7 @@ namespace tracy
     public class Straight : Road
     {
         private readonly string direction;
-        //Horizontal or vertical
 
-        /* Denny Version
-        /// <summary>
-        /// Constructor of the Straight road
-        /// </summary>
-        /// <param name="Coord">Coordinates of the road in the grid</param>
-        /// <param name="dir">direction of the straight road, vertical or horizontal</param>
-        public Straight(Point Coord, string dir)
-        {
-            //assign direction, coordinates and images
-            //creates list of lane and neighbours
-            //Make all spawnable lane spawnable
-            direction = dir;
-            switch (dir)
-            {
-                case "H":
-                    {
-                        Form1 x = (Form1)Form1.ActiveForm;
-                        image = x.imageList2.Images[6];
-                    }
-                    break;
-                case "V":
-                    {
-                        Form1 x = (Form1)Form1.ActiveForm;
-                        image = x.imageList2.Images[7];
-                    }
-                    break;
-                
-            }
-            this.lanes = new List<Lane>();
-            for (int i = 0; i < 2; i++)
-            {
-                lanes.Add(new Lane(time, false));
-            }
-
-            this.changeSpawnability("N", true);
-            this.changeSpawnability("S", true);
-
-            nrOfNeighbours = 0;
-            this.coordinates = Coord;
-            connectedRoads = new Road[2];
-            this.time.Enabled = true;
-        }
-        */
-
-        //JP version
         public Straight(Point Coord, string dir)
         {
             this.lanes = new List<Lane>();
@@ -71,7 +25,6 @@ namespace tracy
             {
                 case "H":
                     {
-                        Tracy x = (Tracy)Tracy.ActiveForm;
                         image = Resource1.StraightH;
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 150, Coord.Y + 60), new Point(Coord.X, Coord.Y + 60), "H"));
                         lanes.Add(new Lane(time, false, new Point(Coord.X, Coord.Y + 85), new Point(Coord.X + 140, Coord.Y + 85), "H"));
@@ -80,7 +33,6 @@ namespace tracy
                     break;
                 case "V":
                     {
-                        Tracy x = (Tracy)Tracy.ActiveForm;
                         image = Resource1.StraightV;
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 55, Coord.Y), new Point(Coord.X + 55, Coord.Y + 150), "V"));
                         lanes.Add(new Lane(time, false, new Point(Coord.X + 80, Coord.Y + 150), new Point(Coord.X + 80, Coord.Y), "V"));
@@ -155,8 +107,7 @@ namespace tracy
 
                     default:
                         {
-                            return false;
-                            // throw new Exception("Trying to connect to an unrecognized side of the road");                       
+                            return false;             
                         }
                 }
             }
@@ -174,7 +125,6 @@ namespace tracy
                             {
                                 nrOfNeighbours++;
                                 connectedRoads[0] = other;
-                               // this.ConnectLanesTo("E", other);
 
                                 return true;
                             }
@@ -192,7 +142,6 @@ namespace tracy
                             {
                                 nrOfNeighbours++;
                                 connectedRoads[1] = other;
-                                //this.ConnectLanesTo("W", other);
                                 return true;
                             }
                             else
@@ -202,8 +151,7 @@ namespace tracy
                         }
                     default:
                         {
-                            return false;
-                            // throw new Exception("Trying to connect to an unrecognized side of the road");                       
+                            return false;         
                         }
                 }
             }
@@ -619,13 +567,9 @@ namespace tracy
             }
         }
 
-        public override void Draw(ref Graphics gr)
+        public override void Draw(ref Graphics g)
         {
-            gr.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
-            /*foreach (Lane mylane in this.lanes)
-            {
-                mylane.drawCars(ref gr);
-            }*/
+            g.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
         }
 
         public override void RemoveLanes()

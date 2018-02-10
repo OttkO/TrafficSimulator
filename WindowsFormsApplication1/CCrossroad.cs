@@ -326,16 +326,12 @@ namespace tracy
                         {
                             if (other.getDirection() == "SW")
                             {
-                                //done
-                                //not tested
                                 this.lanes[2].ConnectToLane(other.getListOfLane()[1]);
                                 other.getListOfLane()[0].ConnectToLane(this.lanes[0]);
                                 other.getListOfLane()[0].ConnectToLane(this.lanes[1]);
                             }
                             else //SE
                             {
-                                //done
-                                //not tested
                                 this.lanes[2].ConnectToLane(other.getListOfLane()[1]);
                                 other.getListOfLane()[0].ConnectToLane(this.lanes[0]);
                                 other.getListOfLane()[0].ConnectToLane(this.lanes[1]);
@@ -724,24 +720,24 @@ namespace tracy
             }
         }
 
-        public override void Draw(ref Graphics gr)
+        public override void Draw(ref Graphics g)
         {
-            gr.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
+            g.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
             int[] id = { 0, 1, 3, 4, 6, 7, 9, 10 };
             for (int i = 0; i < id.Length; i++)
             {
-                this.lanes[id[i]].TrafficLight.Draw(ref gr);
+                this.lanes[id[i]].TrafficLight.Draw(ref g);
             }
         }
 
-        public override void DrawTrafficLight(ref Graphics gr)
+        public override void DrawTrafficLight(ref Graphics g)
         {
             int[] id = { 0, 1, 3, 4, 6, 7, 9, 10 };
             for (int i = 0; i < id.Length; i++)
             {
                 if (this.lanes[id[i]].TrafficLight.ColorChanged)
                 {
-                    this.lanes[id[i]].TrafficLight.Draw(ref gr);
+                    this.lanes[id[i]].TrafficLight.Draw(ref g);
                     this.lanes[id[i]].TrafficLight.ColorChanged = false;
                 }
             }
