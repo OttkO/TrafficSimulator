@@ -111,7 +111,7 @@ namespace tracy
                         }
                         else
                         Roads[i, j].disableTimer();
-                        for (int c = 0; c < Roads[i, j].getListOfLane().Count(); c++)
+                        for (int c = 0; c < Roads[i, j].getListOfLane().Count; c++)
                         {
                             Roads[i, j].getListOfLane()[c].ClearCarList();
                         }

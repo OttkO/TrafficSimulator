@@ -149,7 +149,7 @@ namespace tracy
 
         public virtual void DrawCars(ref Graphics g)
         {
-            for (int i = 0; i < this.lanes.Count(); i++)
+            for (int i = 0; i < this.lanes.Count; i++)
             {
                 this.lanes[i].drawCars(ref g);
             }

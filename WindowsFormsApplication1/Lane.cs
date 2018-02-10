@@ -995,7 +995,7 @@ namespace tracy
 
         public void DisconnectLanes()
         {
-            for (int i = 0; i < ConnectedLanes.Count(); i++)
+            for (int i = 0; i < ConnectedLanes.Count; i++)
             {
                 ConnectedLanes[i].spawnable = true;
             }
@@ -1172,7 +1172,7 @@ namespace tracy
         /// <returns></returns>
         public int GetNrOfCars()
         {
-            return this.Cars.Count();
+            return this.Cars.Count;
         }
 
         /// <summary>
@@ -1181,7 +1181,7 @@ namespace tracy
         /// <returns></returns>
         public int GetNrOfCarsInQueue()
         {
-            return this.CarsInQueue.Count();
+            return this.CarsInQueue.Count;
         }
 
         public void SpawnCars(object obj, EventArgs args)
@@ -1192,7 +1192,7 @@ namespace tracy
                 return;
             }
 
-            for (int i = 0; i < Cars.Count(); i++)
+            for (int i = 0; i < Cars.Count; i++)
             {
                 if (Cars[i].Coordinates == this.Positions[0])
                 {
@@ -1213,7 +1213,7 @@ namespace tracy
         /// <param name="gr"></param>
         public void drawCars(ref Graphics gr)
         {
-            for (int i = 0; i < this.Cars.Count(); i++)
+            for (int i = 0; i < this.Cars.Count; i++)
             {
                 this.Cars[i].Draw(ref gr);
             }

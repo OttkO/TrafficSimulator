@@ -567,7 +567,7 @@ namespace tracy
         {
             //Gets the list of possible spawnable lanes
             //then change all the spawntime
-            for (int i = 0; i < lanes.Count(); i++)
+            for (int i = 0; i < lanes.Count; i++)
             {
                 lanes[i].SpawnTime = time;
             }

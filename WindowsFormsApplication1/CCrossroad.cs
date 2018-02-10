@@ -522,7 +522,7 @@ namespace tracy
             temp.Add(this.lanes[7]);
             temp.Add(this.lanes[9]);
             temp.Add(this.lanes[10]);
-            for (int i = 0; i < temp.Count(); i++)
+            for (int i = 0; i < temp.Count; i++)
             {
                 temp[i].SpawnTime = time;
             }
@@ -739,7 +739,7 @@ namespace tracy
             int[] id = { 0, 1, 3, 4, 6, 7, 9, 10 };
             for (int i = 0; i < id.Length; i++)
             {
-                if (this.lanes[id[i]].TrafficLight.ColorChanged==true)
+                if (this.lanes[id[i]].TrafficLight.ColorChanged)
                 {
                     this.lanes[id[i]].TrafficLight.Draw(ref gr);
                     this.lanes[id[i]].TrafficLight.ColorChanged = false;
