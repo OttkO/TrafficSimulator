@@ -52,13 +52,9 @@ namespace tracy
         public Point Pcross(Point coor)
         {
             int[] cellNum = getSpotNumber(coor);
-            if (Roads[cellNum[0], cellNum[1]] != null)
-            {
-                if (Roads[cellNum[0], cellNum[1]] is PCrossroad)
-                {
+            if (Roads[cellNum[0], cellNum[1]] != null && (Roads[cellNum[0], cellNum[1]] is PCrossroad))
+            {        
                     return Roads[cellNum[0], cellNum[1]].Coordinates;
-                }
-
             }
             return new Point(-10, -10);
         }
@@ -66,12 +62,12 @@ namespace tracy
 
         public Point existCrossRoad(int[] spotNum)
         {
-            if (Roads[spotNum[0], spotNum[1]] != null)
+            if (Roads[spotNum[0], spotNum[1]] != null && (Roads[spotNum[0], spotNum[1]] is CCrossroad) || (Roads[spotNum[0], spotNum[1]] is PCrossroad))
             {
-                if((Roads[spotNum[0], spotNum[1]] is CCrossroad)||(Roads[spotNum[0], spotNum[1]] is PCrossroad))
                 return Roads[spotNum[0], spotNum[1]].Coordinates;
             }
             return new Point(-10, -10);
+
         }
 
         /// <summary>
@@ -154,12 +150,10 @@ namespace tracy
 
         public void PaintLights(ref Graphics graph)
         {
-            //graph.Clear(Color.Transparent);
             foreach (Road r in Roads)
             {
-                if (r != null)
+                if (r != null && (r is CCrossroad || r is PCrossroad))
                 {
-                    if (r is CCrossroad || r is PCrossroad)
                         r.DrawTrafficLight(ref graph);
                 }
             }
@@ -173,9 +167,13 @@ namespace tracy
                 if (r != null)
                 {
                     if (r is PCrossroad)
+                    {
                         ((PCrossroad)r).DrawCars(ref graph);
+                    }
                     else
-                    r.DrawCars(ref graph);
+                    {
+                        r.DrawCars(ref graph);
+                    }
                 }
             }
         }
@@ -201,7 +199,6 @@ namespace tracy
                 g.DrawLine(p, x * cellSize, 0, x * cellSize, (nrOfColumns + 1)* cellSize);
             }
 
-            //pic.Invalidate();
         }
 
         public void adjustGreenTime(Point coord, int time)
@@ -244,7 +241,7 @@ namespace tracy
             placementCoordinates.Y = cellNumber[0] * cellSize;
 
             //if selected spot if filled, do nothing
-            if (!(Roads[cellNumber[0], cellNumber[1]] == null))
+            if ((Roads[cellNumber[0], cellNumber[1]] != null))
             {
                 return false;
             }
@@ -360,8 +357,8 @@ namespace tracy
         {
             int[] cellNumber = new int[2];
 
-            cellNumber[0] = (int)(Coordinates.Y / cellSize);
-            cellNumber[1] = (int)(Coordinates.X / cellSize);
+            cellNumber[0] = (Coordinates.Y / cellSize);
+            cellNumber[1] = (Coordinates.X / cellSize);
 
             return cellNumber;
 

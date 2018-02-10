@@ -157,7 +157,6 @@ namespace tracy
 
         public virtual void DrawTrafficLight(ref Graphics g)
         {
-            return;
         }
 
     }

@@ -223,7 +223,7 @@ namespace tracy
 
         public void stopPedestrian(object sender, EventArgs e)
         {
-            if ((ped[0].fin == true) || (ped[1].fin == true) || (ped[2].fin == true) || (ped[3].fin == true))
+            if ((ped[0].fin || (ped[1].fin) || (ped[2].fin) || (ped[3].fin)))
             {
                 pedTimer.Enabled = false;
                 pedTimer.Stop();
@@ -903,41 +903,39 @@ namespace tracy
         }
 
 
-        public override void Draw(ref Graphics gr)
+        public override void Draw(ref Graphics g)
         {
-            gr.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
+            g.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
             int[] id = { 0, 2, 3, 5, 7, 8 };
             for (int i = 0; i < id.Length; i++)
             {
-                this.lanes[id[i]].TrafficLight.Draw(ref gr);
+                this.lanes[id[i]].TrafficLight.Draw(ref g);
             }
             for (int i = 0; i < trafPed.Count(); i++)
             {
                 if (trafPed[i] != null)
-                    trafPed[i].Draw(ref gr);
+                    trafPed[i].Draw(ref g);
             }
         }
 
-        public override void DrawTrafficLight(ref Graphics gr)
+        public override void DrawTrafficLight(ref Graphics g)
         {
             int[] id = { 0, 2, 3, 5, 7, 8 };
             for (int i = 0; i < id.Length; i++)
             {
                 if (this.lanes[id[i]].TrafficLight.ColorChanged)
                 {
-                    this.lanes[id[i]].TrafficLight.Draw(ref gr);
+                    this.lanes[id[i]].TrafficLight.Draw(ref g);
                     this.lanes[id[i]].TrafficLight.ColorChanged = false;
                 }
             }
             for (int i = 0; i < trafPed.Count(); i++)
             {
-                if (trafPed[i] != null)
+                if (trafPed[i] != null && trafPed[i].ColorChanged)
                 {
-                    if (trafPed[i].ColorChanged == true)
-                    {
-                        trafPed[i].Draw(ref gr);
+
+                        trafPed[i].Draw(ref g);
                         trafPed[i].ColorChanged = false;
-                    }
                 }
                     
             }

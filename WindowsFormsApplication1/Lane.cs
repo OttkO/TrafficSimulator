@@ -10,7 +10,7 @@ namespace tracy
     public class Lane
     {
         //Spawning stuff
-        private Timer spawnTimer;
+        private readonly Timer spawnTimer;
         private readonly Timer moveTimer;
         private int spawnTime = 3000;
         private bool spawnable;
@@ -362,7 +362,7 @@ namespace tracy
                                     Positions[i] = new Point(pStart.X - (i * increments), pStart.Y - (i * increments));
                                 }
 
-                                for (int i = (int)((numberOfPositions / 4)); i < numberOfPositions; i++)
+                                for (int i = (numberOfPositions / 4); i < numberOfPositions; i++)
                                 {
                                     Positions[i] = new Point(pStart.X - (15 * increments), pStart.Y - (i * increments));
                                 }
@@ -1033,7 +1033,6 @@ namespace tracy
                 {
                     //there is room, so move
                     MoveToNextPosition(i);
-                    continue;
                 }
                 try
                 {
@@ -1089,24 +1088,6 @@ namespace tracy
 
         }
 
-        /// <summary>
-        /// Move car at passed index to next position.
-        /// Doesn't perform checks.
-        /// </summary>
-        /// <param name="i"></param>
-        
-        /*private void MoveToNextPosition(int i)
-        {
-            for (int j = 0; j < this.numberOfPositions - 1; j++)
-            {
-                if (Cars[i].Coordinates == Positions[j])
-                {
-                    Cars[i].Coordinates = Positions[j + 1];
-                    return;
-                }
-           }
-        }
-        */
 
         private void MoveToNextPosition(int i)
         {
@@ -1145,7 +1126,8 @@ namespace tracy
 
                     if (((j + Cars[i].Speed) < Positions.Length) && (cycles == 2))
                     {
-                        Cars[i].Coordinates = Positions[j + Cars[i].Speed]; cycles = 0;
+                        Cars[i].Coordinates = Positions[j + Cars[i].Speed];
+                        cycles = 0;
                     }
                     else
                     {
@@ -1187,7 +1169,7 @@ namespace tracy
         public void SpawnCars(object obj, EventArgs args)
         {
             //if lane is not spawnable, or  is full, do nothing.
-            if (this.spawnable == false || this.carLimit == this.Cars.Count)
+            if (!this.spawnable || this.carLimit == this.Cars.Count)
             {
                 return;
             }
@@ -1196,8 +1178,6 @@ namespace tracy
             {
                 if (Cars[i].Coordinates == this.Positions[0])
                 {
-                    //there's a car, so don't spawn, but add to queue
-                   // this.CarsInQueue.Add(new Car(this.Positions[0]));
                     return;
                 }
             }
