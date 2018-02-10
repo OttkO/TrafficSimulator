@@ -9,17 +9,17 @@ namespace tracy
 {
     public class PCrossroad : Road
     {
-        private TrafficLightP[] trafPed = new TrafficLightP[4];
-        private System.EventHandler OnTimerTick;
+        private readonly TrafficLightP[] trafPed = new TrafficLightP[4];
+        private readonly System.EventHandler OnTimerTick;
 
         //For pedestrian stuff
         private System.EventHandler OnSensorPress;
         private System.EventHandler OnPedestrianStart;
-        private System.EventHandler[] OnPedestrianMove = new EventHandler[4];
-        private List<TrafficLightC> tempList = new List<TrafficLightC>();
-        private Timer pedTimer;
+        private readonly System.EventHandler[] OnPedestrianMove = new EventHandler[4];
+        private readonly List<TrafficLightC> tempList = new List<TrafficLightC>();
+        private readonly Timer pedTimer;
         private bool pressedSensor = false;
-        private Pedestrian[] ped;
+        private readonly Pedestrian[] ped;
         private int[] laneID;
 
 
@@ -430,7 +430,6 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[0] = other;
-                            //this.ConnectLanesTo("N", other);
                             return true;
                         }
                         else
@@ -447,7 +446,6 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[1] = other;
-                            //this.ConnectLanesTo("E", other);
                             return true;
                         }
                         else
@@ -464,7 +462,6 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[2] = other;
-                            //this.ConnectLanesTo("S", other);
                             return true;
                         }
                         else
@@ -481,7 +478,6 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[3] = other;
-                            //this.ConnectLanesTo("W", other);
                             return true;
                         }
                         else
@@ -492,20 +488,11 @@ namespace tracy
 
                 default:
                     {
-                        return false;
-                        // throw new Exception("Trying to connect to an unrecognized side of the road");                       
+                        return false;                 
                     }
             }
         }
-        /*
-        public void DisconnectRoad(string side, Road other)
-        {
-            for (int counter = 0; counter < 4; counter++)
-            {
-                if(connectedRoads[counter]
-            }
-        }
-        */
+
         public override void ConnectLanesTo(string side, Road other)
         {
             //Check which side is the Road "other" is connected to the calling road
@@ -702,7 +689,6 @@ namespace tracy
                     break;
                 default:
                     {
-                        //throw new Exception("Trying to connect to an unrecognized side of the road");
                         return;
                     }
             }

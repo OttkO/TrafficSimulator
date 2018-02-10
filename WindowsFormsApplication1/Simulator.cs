@@ -11,17 +11,16 @@ namespace tracy
 {
     public class Simulator
     {
-        private int cellSize;
-        private int zoomValue;
-        private int nrOfColumns;
-        private int nrOfRows;
+        private readonly int cellSize;
+        private readonly int nrOfColumns;
+        private readonly int nrOfRows;
         private int nrOfCrossroads;
-        System.Windows.Forms.Timer masterTimer;
+        readonly System.Windows.Forms.Timer masterTimer;
        
         /// <summary>
         /// 2D array that contains all road elements
         /// </summary>
-        private Road[,] Roads;
+        private readonly Road[,] Roads;
         /// <summary>
         /// Constructor of Simulator.
         /// </summary>
@@ -29,7 +28,6 @@ namespace tracy
         public Simulator(int cellsize)
         {
             this.cellSize = cellsize;
-            this.zoomValue = 100;
             this.nrOfColumns = 7;
             this.nrOfRows = 6;
             this.nrOfCrossroads = 0;

@@ -500,7 +500,6 @@ namespace tracy
                     break;
                 default:
                     {
-                        //throw new Exception("Trying to connect to an unrecognized side of the road");
                         return;
                     }
             }

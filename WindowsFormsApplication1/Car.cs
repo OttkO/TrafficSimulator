@@ -15,7 +15,7 @@ namespace tracy
         private int cruiseSpeed;
         private int speed;
         private Point coordinates;
-        int color;
+        readonly int color;
 
         public Car(Point startV)
         {

@@ -8,7 +8,7 @@ namespace tracy
 {
     public class Straight : Road
     {
-        private string direction;
+        private readonly string direction;
         //Horizontal or vertical
 
         /* Denny Version
@@ -312,7 +312,6 @@ namespace tracy
 
                     default:
                         {
-                            //throw new Exception("Trying to connect to an unrecognized side of the road");
                             return;
                         }
                 }
@@ -410,7 +409,6 @@ namespace tracy
                         break;
                     default:
                         {
-                            //throw new Exception("Trying to connect to an unrecognized side of the road");
                             return;
                         }
                 }

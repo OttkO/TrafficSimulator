@@ -11,25 +11,25 @@ namespace tracy
     {
         //Spawning stuff
         private Timer spawnTimer;
-        private Timer moveTimer;
+        private readonly Timer moveTimer;
         private int spawnTime = 3000;
         private bool spawnable;
 
         //Positioning stuff
-        private string direction;
-        private int numberOfPositions;
-        private int increments;
-        private Point start;
-        private Point end;
-        private Point[] Positions;
+        private readonly string direction;
+        private readonly int numberOfPositions;
+        private readonly int increments;
+        private readonly Point start;
+        private readonly  Point end;
+        private readonly Point[] Positions;
 
 
         //Traffic stuff
         private TrafficLightC trafficLight;
-        private List<Lane> ConnectedLanes;
-        private List<Car> Cars;
-        private List<Car> CarsInQueue;
-        int carLimit;
+        private readonly  List<Lane> ConnectedLanes;
+        private readonly List<Car> Cars;
+        private readonly List<Car> CarsInQueue;
+        readonly int carLimit;
 
 
 

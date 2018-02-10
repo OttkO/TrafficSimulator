@@ -19,7 +19,6 @@ namespace tracy
             Graphics g = Tracy.bmGCars;
             g.Clear(Color.Transparent);
             Brush b = new SolidBrush(Color.Blue);
-            Pen p = new Pen(b);
             if (Oriposition.X < Cpost.X + 75)
             {
                 position.X = position.X + 4;
@@ -91,7 +90,6 @@ namespace tracy
         public void draw(ref Graphics g)
         {
             Brush b = new SolidBrush(Color.Blue);
-            Pen p = new Pen(b);
             g.FillEllipse(b, position.X, position.Y, 5, 5);
         }
 

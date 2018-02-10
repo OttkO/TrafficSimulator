@@ -8,7 +8,7 @@ namespace tracy
 {
     public class Curve : Road
     {
-        private string direction;
+        private readonly string direction;
 
         /// <summary>
         /// Constructor of Curve
