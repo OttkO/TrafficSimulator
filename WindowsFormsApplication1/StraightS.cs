@@ -17,7 +17,7 @@ namespace tracy
             //creates list of lane and neighbours
             //Make all spawnable lane spawnable
             direction = dir;
-            this.coordinates = Coord;
+            this.Coordinates = Coord;
             this.disableTimer();
             
 
@@ -42,7 +42,7 @@ namespace tracy
 
             }
 
-            nrOfNeighbours = 0;
+            NrOfNeighbours = 0;
 
             connectedRoads = new Road[2];
         }
@@ -76,9 +76,8 @@ namespace tracy
                                 || (other is CCrossroad)
                                 || (other is PCrossroad))
                             {
-                                nrOfNeighbours++;
+                                NrOfNeighbours++;
                                 connectedRoads[0] = other;
-                                //this.ConnectLanesTo("N", other);
                                 return true;
                             }
                             else
@@ -94,9 +93,8 @@ namespace tracy
                                 || (other is CCrossroad)
                                 || (other is PCrossroad))
                             {
-                                nrOfNeighbours++;
+                                NrOfNeighbours++;
                                 connectedRoads[1] = other;
-                                //this.ConnectLanesTo("S", other);
                                 return true;
                             }
                             else
@@ -123,7 +121,7 @@ namespace tracy
                                 || (other is CCrossroad)
                                 || (other is PCrossroad))
                             {
-                                nrOfNeighbours++;
+                                NrOfNeighbours++;
                                 connectedRoads[0] = other;
 
                                 return true;
@@ -140,7 +138,7 @@ namespace tracy
                                 || (other is CCrossroad)
                                 || (other is PCrossroad))
                             {
-                                nrOfNeighbours++;
+                                NrOfNeighbours++;
                                 connectedRoads[1] = other;
                                 return true;
                             }
@@ -384,7 +382,7 @@ namespace tracy
                     connectedRoads[1] = null;
                     break;
             }
-            this.nrOfNeighbours--;
+            this.NrOfNeighbours--;
         }
 
         /// <summary>
@@ -554,13 +552,13 @@ namespace tracy
                 case "N":
                 case "E":
                     {
-                        this.lanes[0].SpawnAble = spawnAble;
+                        this.lanes[0].Spawnable = spawnAble;
                     }
                     break;
                 case "S":
                 case "W":
                     {
-                        this.lanes[1].SpawnAble = spawnAble;
+                        this.lanes[1].Spawnable = spawnAble;
                     }
                     break;
 
@@ -569,7 +567,7 @@ namespace tracy
 
         public override void Draw(ref Graphics g)
         {
-            g.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
+            g.DrawImage(image, Coordinates.X, Coordinates.Y, 150, 150);
         }
 
         public override void RemoveLanes()

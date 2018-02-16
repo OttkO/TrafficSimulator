@@ -22,59 +22,59 @@ namespace tracy
             this.lanes = new List<Lane>();
             this.disableTimer();
 
-            this.coordinates = Coord;
+            this.Coordinates = Coord;
             //0 to 5
-            lanes.Add(new Lane(time, true, new Point(coordinates.X + 54, coordinates.Y + 4), new Point(coordinates.X + 54, coordinates.Y + 30), "CrossC", 0));
-            lanes.Add(new Lane(time, true, new Point(coordinates.X + 58, coordinates.Y + 4), new Point(coordinates.X + 64, coordinates.Y + 30), "CrossC", 1));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 85, coordinates.Y + 48), new Point(coordinates.X + 85, coordinates.Y + 4), "CrossC", 2));
-            lanes.Add(new Lane(time, true, new Point(coordinates.X + 137, coordinates.Y + 58), new Point(coordinates.X + 100, coordinates.Y + 58), "CrossC", 3));
-            lanes.Add(new Lane(time, true, new Point(coordinates.X + 137, coordinates.Y + 64), new Point(coordinates.X + 100, coordinates.Y + 63), "CrossC", 4));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 100, coordinates.Y + 86), new Point(coordinates.X + 147, coordinates.Y + 86), "CrossC", 5));
+            lanes.Add(new Lane(time, true, new Point(Coordinates.X + 54, Coordinates.Y + 4), new Point(Coordinates.X + 54, Coordinates.Y + 30), "CrossC", 0));
+            lanes.Add(new Lane(time, true, new Point(Coordinates.X + 58, Coordinates.Y + 4), new Point(Coordinates.X + 64, Coordinates.Y + 30), "CrossC", 1));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 85, Coordinates.Y + 48), new Point(Coordinates.X + 85, Coordinates.Y + 4), "CrossC", 2));
+            lanes.Add(new Lane(time, true, new Point(Coordinates.X + 137, Coordinates.Y + 58), new Point(Coordinates.X + 100, Coordinates.Y + 58), "CrossC", 3));
+            lanes.Add(new Lane(time, true, new Point(Coordinates.X + 137, Coordinates.Y + 64), new Point(Coordinates.X + 100, Coordinates.Y + 63), "CrossC", 4));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 100, Coordinates.Y + 86), new Point(Coordinates.X + 147, Coordinates.Y + 86), "CrossC", 5));
 
             // 6 to 11
-            lanes.Add(new Lane(time, true, new Point(coordinates.X + 85, coordinates.Y + 141), new Point(coordinates.X + 85, coordinates.Y + 100), "CrossC", 6));
-            lanes.Add(new Lane(time, true, new Point(coordinates.X + 85, coordinates.Y + 141), new Point(coordinates.X + 75, coordinates.Y + 100), "CrossC", 7));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 56, coordinates.Y + 100), new Point(coordinates.X + 56, coordinates.Y + 143), "CrossC", 8));
-            lanes.Add(new Lane(time, true, new Point(coordinates.X + 1, coordinates.Y + 85), new Point(coordinates.X + 50, coordinates.Y + 85), "CrossC", 9));
-            lanes.Add(new Lane(time, true, new Point(coordinates.X + 1, coordinates.Y + 83), new Point(coordinates.X + 50, coordinates.Y + 70), "CrossC", 10));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 50, coordinates.Y + 54), new Point(coordinates.X + 1, coordinates.Y + 61), "CrossC", 11));
+            lanes.Add(new Lane(time, true, new Point(Coordinates.X + 85, Coordinates.Y + 141), new Point(Coordinates.X + 85, Coordinates.Y + 100), "CrossC", 6));
+            lanes.Add(new Lane(time, true, new Point(Coordinates.X + 85, Coordinates.Y + 141), new Point(Coordinates.X + 75, Coordinates.Y + 100), "CrossC", 7));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 56, Coordinates.Y + 100), new Point(Coordinates.X + 56, Coordinates.Y + 143), "CrossC", 8));
+            lanes.Add(new Lane(time, true, new Point(Coordinates.X + 1, Coordinates.Y + 85), new Point(Coordinates.X + 50, Coordinates.Y + 85), "CrossC", 9));
+            lanes.Add(new Lane(time, true, new Point(Coordinates.X + 1, Coordinates.Y + 83), new Point(Coordinates.X + 50, Coordinates.Y + 70), "CrossC", 10));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 50, Coordinates.Y + 54), new Point(Coordinates.X + 1, Coordinates.Y + 61), "CrossC", 11));
 
             // 12 to 17
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 56, coordinates.Y + 40), new Point(coordinates.X + 50, coordinates.Y + 60), "CrossC", 12));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 64, coordinates.Y + 40), new Point(coordinates.X + 56, coordinates.Y + 100), "CrossC", 13));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 74, coordinates.Y + 47), new Point(coordinates.X + 100, coordinates.Y + 86), "CrossC", 14));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 100, coordinates.Y + 58), new Point(coordinates.X + 89, coordinates.Y + 48), "CrossC", 15));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 100, coordinates.Y + 65), new Point(coordinates.X + 50, coordinates.Y + 60), "CrossC", 16));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 100, coordinates.Y + 63), new Point(coordinates.X + 56, coordinates.Y + 100), "CrossC", 17));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 56, Coordinates.Y + 40), new Point(Coordinates.X + 50, Coordinates.Y + 60), "CrossC", 12));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 64, Coordinates.Y + 40), new Point(Coordinates.X + 56, Coordinates.Y + 100), "CrossC", 13));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 74, Coordinates.Y + 47), new Point(Coordinates.X + 100, Coordinates.Y + 86), "CrossC", 14));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 100, Coordinates.Y + 58), new Point(Coordinates.X + 89, Coordinates.Y + 48), "CrossC", 15));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 100, Coordinates.Y + 65), new Point(Coordinates.X + 50, Coordinates.Y + 60), "CrossC", 16));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 100, Coordinates.Y + 63), new Point(Coordinates.X + 56, Coordinates.Y + 100), "CrossC", 17));
 
             // 18 to 23
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 88, coordinates.Y + 95), new Point(coordinates.X + 100, coordinates.Y + 88), "CrossC", 18));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 72, coordinates.Y + 100), new Point(coordinates.X + 88, coordinates.Y + 48), "CrossC", 19));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 72, coordinates.Y + 100), new Point(coordinates.X + 50, coordinates.Y + 58), "CrossC", 20));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 50, coordinates.Y + 88), new Point(coordinates.X + 56, coordinates.Y + 100), "CrossC", 21));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 40, coordinates.Y + 70), new Point(coordinates.X + 100, coordinates.Y + 88), "CrossC", 22));
-            lanes.Add(new Lane(time, false, new Point(coordinates.X + 40, coordinates.Y + 70), new Point(coordinates.X + 88, coordinates.Y + 48), "CrossC", 23));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 88, Coordinates.Y + 95), new Point(Coordinates.X + 100, Coordinates.Y + 88), "CrossC", 18));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 72, Coordinates.Y + 100), new Point(Coordinates.X + 88, Coordinates.Y + 48), "CrossC", 19));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 72, Coordinates.Y + 100), new Point(Coordinates.X + 50, Coordinates.Y + 58), "CrossC", 20));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 50, Coordinates.Y + 88), new Point(Coordinates.X + 56, Coordinates.Y + 100), "CrossC", 21));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 40, Coordinates.Y + 70), new Point(Coordinates.X + 100, Coordinates.Y + 88), "CrossC", 22));
+            lanes.Add(new Lane(time, false, new Point(Coordinates.X + 40, Coordinates.Y + 70), new Point(Coordinates.X + 88, Coordinates.Y + 48), "CrossC", 23));
 
 
 
-            this.lanes[0].TrafficLight.position = new Point(coordinates.X + 25, coordinates.Y + 27);
-            this.lanes[0].TrafficLight.CPost = coordinates;
-            this.lanes[1].TrafficLight.position = new Point(coordinates.X + 35, coordinates.Y + 27);
-            this.lanes[1].TrafficLight.CPost = coordinates;
-            this.lanes[3].TrafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 30);
-            this.lanes[3].TrafficLight.CPost = coordinates;
-            this.lanes[4].TrafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 40);
-            this.lanes[4].TrafficLight.CPost = coordinates;
+            this.lanes[0].TrafficLight.Position = new Point(Coordinates.X + 25, Coordinates.Y + 27);
+            this.lanes[0].TrafficLight.CPost = Coordinates;
+            this.lanes[1].TrafficLight.Position = new Point(Coordinates.X + 35, Coordinates.Y + 27);
+            this.lanes[1].TrafficLight.CPost = Coordinates;
+            this.lanes[3].TrafficLight.Position = new Point(Coordinates.X + 100, Coordinates.Y + 30);
+            this.lanes[3].TrafficLight.CPost = Coordinates;
+            this.lanes[4].TrafficLight.Position = new Point(Coordinates.X + 100, Coordinates.Y + 40);
+            this.lanes[4].TrafficLight.CPost = Coordinates;
 
-            this.lanes[6].TrafficLight.position = new Point(coordinates.X + 110, coordinates.Y + 100);
-            this.lanes[6].TrafficLight.CPost = coordinates;
-            this.lanes[7].TrafficLight.position = new Point(coordinates.X + 100, coordinates.Y + 100);
-            this.lanes[7].TrafficLight.CPost = coordinates;
+            this.lanes[6].TrafficLight.Position = new Point(Coordinates.X + 110, Coordinates.Y + 100);
+            this.lanes[6].TrafficLight.CPost = Coordinates;
+            this.lanes[7].TrafficLight.Position = new Point(Coordinates.X + 100, Coordinates.Y + 100);
+            this.lanes[7].TrafficLight.CPost = Coordinates;
 
-            this.lanes[9].TrafficLight.position = new Point(coordinates.X + 26, coordinates.Y + 110);
-            this.lanes[9].TrafficLight.CPost = coordinates;
-            this.lanes[10].TrafficLight.position = new Point(coordinates.X + 26, coordinates.Y + 100);
-            this.lanes[10].TrafficLight.CPost = coordinates;
+            this.lanes[9].TrafficLight.Position = new Point(Coordinates.X + 26, Coordinates.Y + 110);
+            this.lanes[9].TrafficLight.CPost = Coordinates;
+            this.lanes[10].TrafficLight.Position = new Point(Coordinates.X + 26, Coordinates.Y + 100);
+            this.lanes[10].TrafficLight.CPost = Coordinates;
 
             this.changeSpawnability("N", true);
             this.changeSpawnability("E", true);
@@ -128,23 +128,23 @@ namespace tracy
             }
 
 
-            this.lanes[0].TrafficLight.greenInterval = 20;
-            this.lanes[1].TrafficLight.greenInterval = 10;
-            this.lanes[3].TrafficLight.greenInterval = 20;
-            this.lanes[4].TrafficLight.greenInterval = 10;
-            this.lanes[6].TrafficLight.greenInterval = 20;
-            this.lanes[7].TrafficLight.greenInterval = 10;
-            this.lanes[9].TrafficLight.greenInterval = 20;
-            this.lanes[10].TrafficLight.greenInterval = 10;
+            this.lanes[0].TrafficLight.GreenInterval = 20;
+            this.lanes[1].TrafficLight.GreenInterval = 10;
+            this.lanes[3].TrafficLight.GreenInterval = 20;
+            this.lanes[4].TrafficLight.GreenInterval = 10;
+            this.lanes[6].TrafficLight.GreenInterval = 20;
+            this.lanes[7].TrafficLight.GreenInterval = 10;
+            this.lanes[9].TrafficLight.GreenInterval = 20;
+            this.lanes[10].TrafficLight.GreenInterval = 10;
 
-            this.lanes[0].TrafficLight.redInterval = 20;
-            this.lanes[1].TrafficLight.redInterval = 30;
-            this.lanes[3].TrafficLight.redInterval = 20;
-            this.lanes[4].TrafficLight.redInterval = 30;
-            this.lanes[6].TrafficLight.redInterval = 20;
-            this.lanes[7].TrafficLight.redInterval = 30;
-            this.lanes[9].TrafficLight.redInterval = 20;
-            this.lanes[10].TrafficLight.redInterval = 30;
+            this.lanes[0].TrafficLight.RedInterval = 20;
+            this.lanes[1].TrafficLight.RedInterval = 30;
+            this.lanes[3].TrafficLight.RedInterval = 20;
+            this.lanes[4].TrafficLight.RedInterval = 30;
+            this.lanes[6].TrafficLight.RedInterval = 20;
+            this.lanes[7].TrafficLight.RedInterval = 30;
+            this.lanes[9].TrafficLight.RedInterval = 20;
+            this.lanes[10].TrafficLight.RedInterval = 30;
 
 
             //Connect all inside lane here  
@@ -173,7 +173,7 @@ namespace tracy
             this.lanes[10].ConnectToLane(this.lanes[23]);
             this.lanes[23].ConnectToLane(this.lanes[2]);
 
-            nrOfNeighbours = 0;
+            NrOfNeighbours = 0;
             connectedRoads = new Road[4];
             
             this.TrafTime.Interval = 1000;
@@ -212,12 +212,12 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[0] = other;
-                            this.nrOfNeighbours++;
+                            this.NrOfNeighbours++;
                             return true;
                         }
                         else
                         {
-                            this.nrOfNeighbours++;
+                            this.NrOfNeighbours++;
                             return false;
                         }
                     }
@@ -230,12 +230,12 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[1] = other;
-                            this.nrOfNeighbours++;
+                            this.NrOfNeighbours++;
                             return true;
                         }
                         else
                         {
-                            this.nrOfNeighbours++;
+                            this.NrOfNeighbours++;
                             return false;
                         }
                     }
@@ -248,12 +248,12 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[2] = other;
-                            this.nrOfNeighbours++;
+                            this.NrOfNeighbours++;
                             return true;
                         }
                         else
                         {
-                            this.nrOfNeighbours++;
+                            this.NrOfNeighbours++;
                             return false;
                         }
                     }
@@ -266,12 +266,12 @@ namespace tracy
                             || (other is PCrossroad))
                         {
                             connectedRoads[3] = other;
-                            this.nrOfNeighbours++;
+                            this.NrOfNeighbours++;
                             return true;
                         }
                         else
                         {
-                            this.nrOfNeighbours++;
+                            this.NrOfNeighbours++;
                             return false;
                         }
                     }
@@ -545,7 +545,7 @@ namespace tracy
                     connectedRoads[3] = null;
                     break;
             }
-            this.nrOfNeighbours--;
+            this.NrOfNeighbours--;
         }
 
         /// <summary>
@@ -694,50 +694,50 @@ namespace tracy
             {
                 case "N":
                     {
-                        this.lanes[0].SpawnAble = spawnAble;
-                        this.lanes[1].SpawnAble = spawnAble;
+                        this.lanes[0].Spawnable = spawnAble;
+                        this.lanes[1].Spawnable = spawnAble;
                     }
                     break;
                 case "E":
                     {
-                        this.lanes[3].SpawnAble = spawnAble;
-                        this.lanes[4].SpawnAble = spawnAble;
+                        this.lanes[3].Spawnable = spawnAble;
+                        this.lanes[4].Spawnable = spawnAble;
                     }
                     break;
                 case "S":
                     {
-                        this.lanes[6].SpawnAble = spawnAble;
-                        this.lanes[7].SpawnAble = spawnAble;
+                        this.lanes[6].Spawnable = spawnAble;
+                        this.lanes[7].Spawnable = spawnAble;
                     }
                     break;
                 case "W":
                     {
-                        this.lanes[9].SpawnAble = spawnAble;
-                        this.lanes[10].SpawnAble = spawnAble;
+                        this.lanes[9].Spawnable = spawnAble;
+                        this.lanes[10].Spawnable = spawnAble;
                     }
                     break;
 
             }
         }
 
-        public override void Draw(ref Graphics g)
+        public override void Draw(ref Graphics gr)
         {
-            g.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
+            gr.DrawImage(image, Coordinates.X, Coordinates.Y, 150, 150);
             int[] id = { 0, 1, 3, 4, 6, 7, 9, 10 };
             for (int i = 0; i < id.Length; i++)
             {
-                this.lanes[id[i]].TrafficLight.Draw(ref g);
+                this.lanes[id[i]].TrafficLight.Draw(ref gr);
             }
         }
 
-        public override void DrawTrafficLight(ref Graphics g)
+        public override void DrawTrafficLight(ref Graphics gr)
         {
             int[] id = { 0, 1, 3, 4, 6, 7, 9, 10 };
             for (int i = 0; i < id.Length; i++)
             {
                 if (this.lanes[id[i]].TrafficLight.ColorChanged)
                 {
-                    this.lanes[id[i]].TrafficLight.Draw(ref g);
+                    this.lanes[id[i]].TrafficLight.Draw(ref gr);
                     this.lanes[id[i]].TrafficLight.ColorChanged = false;
                 }
             }
@@ -785,10 +785,10 @@ namespace tracy
                 this.lanes[0].TrafficLight.Colour = 3;
                 this.lanes[1].TrafficLight.Colour = 3;
                 this.lanes[3].TrafficLight.Colour = 3;
-                this.lanes[0].TrafficLight.Timer = this.lanes[0].TrafficLight.greenInterval / 2;
-                this.lanes[4].TrafficLight.Timer = this.lanes[4].TrafficLight.greenInterval * 2;
-                this.lanes[6].TrafficLight.Timer = this.lanes[6].TrafficLight.greenInterval / 2;
-                this.lanes[7].TrafficLight.Timer = this.lanes[7].TrafficLight.greenInterval;
+                this.lanes[0].TrafficLight.Timer = this.lanes[0].TrafficLight.GreenInterval / 2;
+                this.lanes[4].TrafficLight.Timer = this.lanes[4].TrafficLight.GreenInterval * 2;
+                this.lanes[6].TrafficLight.Timer = this.lanes[6].TrafficLight.GreenInterval / 2;
+                this.lanes[7].TrafficLight.Timer = this.lanes[7].TrafficLight.GreenInterval;
 
                 this.lanes[4].TrafficLight.Colour = 1;
                 this.lanes[6].TrafficLight.Colour = 1;
@@ -805,10 +805,10 @@ namespace tracy
                 this.lanes[3].TrafficLight.Colour = 3;
                 this.lanes[4].TrafficLight.Colour = 3;
                 this.lanes[6].TrafficLight.Colour = 3;
-                this.lanes[3].TrafficLight.Timer = this.lanes[3].TrafficLight.greenInterval / 2;
-                this.lanes[7].TrafficLight.Timer = this.lanes[7].TrafficLight.greenInterval * 2;
-                this.lanes[9].TrafficLight.Timer = this.lanes[9].TrafficLight.greenInterval / 2;
-                this.lanes[10].TrafficLight.Timer = this.lanes[10].TrafficLight.greenInterval;
+                this.lanes[3].TrafficLight.Timer = this.lanes[3].TrafficLight.GreenInterval / 2;
+                this.lanes[7].TrafficLight.Timer = this.lanes[7].TrafficLight.GreenInterval * 2;
+                this.lanes[9].TrafficLight.Timer = this.lanes[9].TrafficLight.GreenInterval / 2;
+                this.lanes[10].TrafficLight.Timer = this.lanes[10].TrafficLight.GreenInterval;
 
                 this.lanes[0].TrafficLight.Colour = 1;
                 this.lanes[1].TrafficLight.Colour = 1;
@@ -825,10 +825,10 @@ namespace tracy
                 this.lanes[6].TrafficLight.Colour = 3;
                 this.lanes[7].TrafficLight.Colour = 3;
                 this.lanes[9].TrafficLight.Colour = 3;
-                this.lanes[6].TrafficLight.Timer = this.lanes[6].TrafficLight.greenInterval / 2;
-                this.lanes[10].TrafficLight.Timer = this.lanes[10].TrafficLight.greenInterval * 2;
-                this.lanes[0].TrafficLight.Timer = this.lanes[0].TrafficLight.greenInterval / 2;
-                this.lanes[1].TrafficLight.Timer = this.lanes[1].TrafficLight.greenInterval;
+                this.lanes[6].TrafficLight.Timer = this.lanes[6].TrafficLight.GreenInterval / 2;
+                this.lanes[10].TrafficLight.Timer = this.lanes[10].TrafficLight.GreenInterval * 2;
+                this.lanes[0].TrafficLight.Timer = this.lanes[0].TrafficLight.GreenInterval / 2;
+                this.lanes[1].TrafficLight.Timer = this.lanes[1].TrafficLight.GreenInterval;
 
                 this.lanes[0].TrafficLight.Colour = 1;
                 this.lanes[1].TrafficLight.Colour = 1;
@@ -845,10 +845,10 @@ namespace tracy
                 this.lanes[9].TrafficLight.Colour = 3;
                 this.lanes[10].TrafficLight.Colour = 3;
                 this.lanes[0].TrafficLight.Colour = 3;
-                this.lanes[9].TrafficLight.Timer = this.lanes[9].TrafficLight.greenInterval / 2;
-                this.lanes[1].TrafficLight.Timer = this.lanes[1].TrafficLight.greenInterval * 2;
-                this.lanes[3].TrafficLight.Timer = this.lanes[3].TrafficLight.greenInterval / 2;
-                this.lanes[4].TrafficLight.Timer = this.lanes[4].TrafficLight.greenInterval;
+                this.lanes[9].TrafficLight.Timer = this.lanes[9].TrafficLight.GreenInterval / 2;
+                this.lanes[1].TrafficLight.Timer = this.lanes[1].TrafficLight.GreenInterval * 2;
+                this.lanes[3].TrafficLight.Timer = this.lanes[3].TrafficLight.GreenInterval / 2;
+                this.lanes[4].TrafficLight.Timer = this.lanes[4].TrafficLight.GreenInterval;
 
                 this.lanes[1].TrafficLight.Colour = 1;
                 this.lanes[3].TrafficLight.Colour = 1;

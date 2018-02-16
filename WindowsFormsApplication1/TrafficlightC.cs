@@ -16,60 +16,60 @@ namespace tracy
 
         public override void Draw(ref Graphics g)
         {
-            switch (lightColor)
+            switch (Colour)
             {
                 case 1:
-                    if (place.X < Cplace.X + 75 && place.Y < Cplace.Y + 75)
+                    if (Position.X < Cplace.X + 75 && Position.Y < Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.RedNorth, place.X, place.Y, 10, 20);
+                        g.DrawImage(Resource1.RedNorth, Position.X, Position.Y, 10, 20);
                     }
-                    else if (place.X > Cplace.X + 75 && place.Y < Cplace.Y + 75)
+                    else if (Position.X > Cplace.X + 75 && Position.Y < Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.RedEast, place.X, place.Y, 20, 10);
+                        g.DrawImage(Resource1.RedEast, Position.X, Position.Y, 20, 10);
                     }
-                    else if (place.X > Cplace.X + 75 && place.Y > Cplace.Y + 75)
+                    else if (Position.X > Cplace.X + 75 && Position.Y > Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.RedSouth, place.X, place.Y, 10, 20);
+                        g.DrawImage(Resource1.RedSouth, Position.X, Position.Y, 10, 20);
                     }
                     else
                     {
-                        g.DrawImage(Resource1.RedWest, place.X, place.Y, 20, 10);
+                        g.DrawImage(Resource1.RedWest, Position.X, Position.Y, 20, 10);
                     }
                     break;
                 case 2:
-                    if (place.X < Cplace.X + 75 && place.Y < Cplace.Y + 75)
+                    if (Position.X < Cplace.X + 75 && Position.Y < Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.YellowNorth, place.X, place.Y, 10, 20);
+                        g.DrawImage(Resource1.YellowNorth, Position.X, Position.Y, 10, 20);
                     }
-                    else if (place.X > Cplace.X + 75 && place.Y < Cplace.Y + 75)
+                    else if (Position.X > Cplace.X + 75 && Position.Y < Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.YellowEast, place.X, place.Y, 20, 10);
+                        g.DrawImage(Resource1.YellowEast, Position.X, Position.Y, 20, 10);
                     }
-                    else if (place.X > Cplace.X + 75 && place.Y > Cplace.Y + 75)
+                    else if (Position.X > Cplace.X + 75 && Position.Y > Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.YellowSouth, place.X, place.Y, 10, 20);
+                        g.DrawImage(Resource1.YellowSouth, Position.X, Position.Y, 10, 20);
                     }
                     else
                     {
-                        g.DrawImage(Resource1.YellowWest, place.X, place.Y, 20, 10);
+                        g.DrawImage(Resource1.YellowWest, Position.X, Position.Y, 20, 10);
                     }
                     break;
                 case 3:
-                    if (place.X < Cplace.X + 75 && place.Y < Cplace.Y + 75)
+                    if (Position.X < Cplace.X + 75 && Position.Y < Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.GreenNorth, place.X, place.Y, 10, 20);
+                        g.DrawImage(Resource1.GreenNorth, Position.X, Position.Y, 10, 20);
                     }
-                    else if (place.X > Cplace.X + 75 && place.Y < Cplace.Y + 75)
+                    else if (Position.X > Cplace.X + 75 && Position.Y < Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.GreenEast, place.X, place.Y, 20, 10);
+                        g.DrawImage(Resource1.GreenEast, Position.X, Position.Y, 20, 10);
                     }
-                    else if (place.X > Cplace.X + 75 && place.Y > Cplace.Y + 75)
+                    else if (Position.X > Cplace.X + 75 && Position.Y > Cplace.Y + 75)
                     {
-                        g.DrawImage(Resource1.GreenSouth, place.X, place.Y, 10, 20);
+                        g.DrawImage(Resource1.GreenSouth, Position.X, Position.Y, 10, 20);
                     }
                     else
                     {
-                        g.DrawImage(Resource1.GreenWest, place.X, place.Y, 20, 10);
+                        g.DrawImage(Resource1.GreenWest, Position.X, Position.Y, 20, 10);
                     }
                     break;
             }
@@ -80,26 +80,26 @@ namespace tracy
             base.IncTimer();
 
 
-            if ((timer == redInterval) && (lightColor == 1))
+            if ((Timer == RedInterval) && (Colour == 1))
             // finish red light duration, switch color to green,reset timer
             {
-                lightColor = 3;
-                colorChanged = true;
-                timer = 0;
+                Colour = 3;
+                ColorChanged = true;
+                Timer = 0;
             }
-            else if ((timer == greenInterval - 3) && (lightColor == 3))
+            else if ((Timer == GreenInterval - 3) && (Colour == 3))
             // finish green light duration, switch color to yellow
             // assume the yellow light last for 3 seconds
             {
-                lightColor = 2;
-                colorChanged = true;
+                Colour = 2;
+                ColorChanged = true;
             }
-            else if ((timer == greenInterval) && (lightColor == 2))
+            else if ((Timer == GreenInterval) && (Colour == 2))
             // finish yellow light duration, switch color to red,reset timer
             {
-                lightColor = 1;
-                colorChanged = true;
-                timer = 0;
+                Colour = 1;
+                ColorChanged = true;
+                Timer = 0;
             }
         }
 

@@ -10,37 +10,20 @@ namespace tracy
     public abstract class Road
     {
         protected Image image;
-        protected Point coordinates;
-        protected int nrOfNeighbours;
         protected List<Lane> lanes;
         protected Road[] connectedRoads;
         protected Timer time = new Timer(); 
         protected Timer TrafTime = new Timer();
-        protected Graphics Gra;
 
 
-        public Graphics graphic
+        public Graphics Graphic
         {
-            get
-            {
-                return Gra;
-            }
-            set
-            {
-                Gra = value;
-            }
+            get;set;
 
         }
         public Point Coordinates
         {
-            get
-            {
-                return coordinates;
-            }
-            set
-            {
-                coordinates = value;
-            }
+            get;set;
         }
 
         public Image Image
@@ -65,14 +48,7 @@ namespace tracy
 
         public int NrOfNeighbours
         {
-            get
-            {
-                return nrOfNeighbours;
-            }
-            set
-            {
-                nrOfNeighbours = value;
-            }
+            get;set;
         }
 
         /// <summary>

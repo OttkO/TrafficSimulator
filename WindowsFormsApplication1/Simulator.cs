@@ -255,7 +255,7 @@ namespace tracy
                             return false;
                         }
                         this.Roads[cellNumber[0], cellNumber[1]] = new PCrossroad(placementCoordinates);
-                        this.Roads[cellNumber[0], cellNumber[1]].graphic = g;
+                        this.Roads[cellNumber[0], cellNumber[1]].Graphic = g;
                         this.connectToNeighbours(cellNumber);
                         nrOfCrossroads++;
                         break;
@@ -265,7 +265,7 @@ namespace tracy
                             return false;
                         }
                         this.Roads[cellNumber[0], cellNumber[1]] = new CCrossroad(placementCoordinates);
-                        this.Roads[cellNumber[0], cellNumber[1]].graphic = g;
+                        this.Roads[cellNumber[0], cellNumber[1]].Graphic = g;
                         this.connectToNeighbours(cellNumber);
                         nrOfCrossroads++;
                         break;

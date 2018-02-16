@@ -46,7 +46,6 @@ namespace tracy
             simu.PaintLights(ref bmGLights);
             simu.PaintCars(ref bmGCars);
             this.pbGrid.Invalidate();
-            GC.Collect();
         }
 
         private void Form1_Load(object sender, EventArgs e)

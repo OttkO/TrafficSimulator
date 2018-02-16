@@ -10,14 +10,13 @@ namespace tracy
     {
         private Point position;
         private Point Oriposition;
-        private Point Cpost;
-        private bool finished = false;
 
         public void Move(object s, EventArgs e)
         {
             
             Graphics g = Tracy.bmGCars;
             g.Clear(Color.Transparent);
+            this.Fin = false;
             Brush b = new SolidBrush(Color.Blue);
             if (Oriposition.X < Cpost.X + 75)
             {
@@ -26,7 +25,7 @@ namespace tracy
                 if (position.X == Cpost.X + 102)
                 {
                     Oriposition = position;
-                    finished = true;
+                    this.Fin = true;
                 }
             }
             else
@@ -36,13 +35,13 @@ namespace tracy
                 if (position.X == Cpost.X + 42)
                 {
                     Oriposition = position;
-                    finished = true;
+                    this.Fin = true;
                 }
             }
 
         }
 
-        public Point pos
+        public Point Pos
         {
             get
             {
@@ -55,7 +54,7 @@ namespace tracy
             }
         }
 
-        public Point oriPosition
+        public Point OriPosition
         {
             get
             {
@@ -63,31 +62,19 @@ namespace tracy
             }
         }
 
-        public Point Cpos
+        public Point Cpost
         {
-            get
-            {
-                return Cpost;
-            }
-            set
-            {
-                Cpost = value;
-            }
+            get;
+            set;
+     
         }
 
-        public bool fin
+        public bool Fin
         {
-            get
-            {
-                return finished;
-            }
-            set
-            {
-                finished = value;
-            }
+            get;set;
         }
 
-        public void draw(ref Graphics g)
+        public void Draw(ref Graphics g)
         {
             Brush b = new SolidBrush(Color.Blue);
             g.FillEllipse(b, position.X, position.Y, 5, 5);

@@ -14,7 +14,6 @@ namespace tracy
     {
         private int cruiseSpeed;
         private int speed;
-        private Point coordinates;
         readonly int color;
 
         public Car(Point startV)
@@ -24,15 +23,14 @@ namespace tracy
 
             CruiseSpeed = r.Next(1, 5);
             Speed = CruiseSpeed;
-            coordinates = startV;
+            Coordinates = startV;
             color = r.Next(0, 4);
 
         }
 
         public Point Coordinates
         {
-            get { return this.coordinates; }
-            set { this.coordinates = value; }
+            get;set;
         }
 
         public int CruiseSpeed { get => cruiseSpeed; set => cruiseSpeed = value; }
@@ -64,7 +62,7 @@ namespace tracy
                     break;
             }
 
-            gr.FillRectangle(p, new Rectangle(coordinates.X, coordinates.Y, 8, 8));
+            gr.FillRectangle(p, new Rectangle(Coordinates.X, Coordinates.Y, 8, 8));
 
             p.Dispose();
 

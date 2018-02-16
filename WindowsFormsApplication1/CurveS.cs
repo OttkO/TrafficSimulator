@@ -57,8 +57,8 @@ namespace tracy
 
             }
 
-            nrOfNeighbours = 0;
-            this.coordinates = Coord;
+            NrOfNeighbours = 0;
+            this.Coordinates = Coord;
             connectedRoads = new Road[2];
         }
 
@@ -575,7 +575,7 @@ namespace tracy
                     connectedRoads[1] = null;
                     break;
             }
-            this.nrOfNeighbours--;
+            this.NrOfNeighbours--;
         }
 
         /// <summary>
@@ -861,10 +861,10 @@ namespace tracy
                     {
                         if (direction == "NW")
                         {
-                            this.lanes[0].SpawnAble = spawnAble;
+                            this.lanes[0].Spawnable = spawnAble;
                         }
                         else if (direction == "NE")
-                            this.lanes[1].SpawnAble = spawnAble;
+                            this.lanes[1].Spawnable = spawnAble;
 
                     }
                     break;
@@ -872,30 +872,30 @@ namespace tracy
                     {
                         if (direction == "NE")
                         {
-                            this.lanes[0].SpawnAble = spawnAble;
+                            this.lanes[0].Spawnable = spawnAble;
                         }
                         else if (direction == "SE")
-                            this.lanes[0].SpawnAble = spawnAble;
+                            this.lanes[0].Spawnable = spawnAble;
                     }
                     break;
                 case "S":
                     {
                         if (direction == "SE")
                         {
-                            this.lanes[1].SpawnAble = spawnAble;
+                            this.lanes[1].Spawnable = spawnAble;
                         }
                         else if (direction == "SW")
-                            this.lanes[1].SpawnAble = spawnAble;
+                            this.lanes[1].Spawnable = spawnAble;
                     }
                     break;
                 case "W":
                     {
                         if (direction == "SW")
                         {
-                            this.lanes[0].SpawnAble = spawnAble;
+                            this.lanes[0].Spawnable = spawnAble;
                         }
                         else if (direction == "NW")
-                            this.lanes[1].SpawnAble = spawnAble;
+                            this.lanes[1].Spawnable = spawnAble;
                     }
                     break;
 
@@ -904,7 +904,7 @@ namespace tracy
 
         public override void Draw(ref Graphics gr)
         {
-            gr.DrawImage(image, coordinates.X, coordinates.Y, 150, 150);
+            gr.DrawImage(image, Coordinates.X, Coordinates.Y, 150, 150);
         }
 
         public override void RemoveLanes()

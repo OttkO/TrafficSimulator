@@ -12,8 +12,6 @@ namespace tracy
         //Spawning stuff
         private readonly Timer spawnTimer;
         private readonly Timer moveTimer;
-        private int spawnTime = 3000;
-        private bool spawnable;
 
         //Positioning stuff
         private readonly string direction;
@@ -51,12 +49,12 @@ namespace tracy
             this.direction = direction;
 
             //spawning
-            this.spawnable = true;
+            this.Spawnable = true;
             this.spawnTimer = time;
-            this.spawnTimer.Interval = spawnTime;
+            this.spawnTimer.Interval = SpawnTime;
             this.moveTimer = new Timer();
             moveTimer.Interval = 25;
-            moveTimer.Tick += this.moveCars;
+            moveTimer.Tick += this.MoveCars;
             this.carLimit = 14;
 
             spawnTimer.Tick += this.SpawnCars;
@@ -315,14 +313,15 @@ namespace tracy
             this.direction = direction;
 
 
-
+            
             //spawning
-            this.spawnable = true;
+            this.Spawnable = true;
+            this.SpawnTime = 3000;
             this.spawnTimer = time;
-            this.spawnTimer.Interval = spawnTime;
+            this.spawnTimer.Interval = SpawnTime;
             this.moveTimer = new Timer();
             moveTimer.Interval = 25;
-            moveTimer.Tick += this.moveCars;
+            moveTimer.Tick += this.MoveCars;
 
             spawnTimer.Tick += this.SpawnCars;
 
@@ -912,22 +911,14 @@ namespace tracy
             //if light is green changeto next lane.
         }
 
-        public bool SpawnAble
+        public bool Spawnable
         {
-            get { return spawnable; }
-            set { spawnable = value; }
+            get;set;
         }
 
         public int SpawnTime
         {
-            get
-            {
-                return this.spawnTime;
-            }
-            set
-            {
-                this.spawnTime = value;
-            }
+            get;set;
         }
 
 
@@ -990,29 +981,30 @@ namespace tracy
         public void ConnectToLane(Lane lane)
         {
             this.ConnectedLanes.Add(lane);
-            lane.spawnable = false;
+            lane.Spawnable = false;
         }
 
         public void DisconnectLanes()
         {
             for (int i = 0; i < ConnectedLanes.Count; i++)
             {
-                ConnectedLanes[i].spawnable = true;
+                ConnectedLanes[i].Spawnable = true;
             }
 
             this.ConnectedLanes.Clear();
         }
 
         //JP Version
-        public void moveCars(object obj, EventArgs args)
+        public void MoveCars(object obj, EventArgs args)
         {
 
-            int positionIndex = -1;
 
             //for each car, check if can move, if so, move car
             //if first car and there is room, then move
             for (int i = 0; i < this.Cars.Count; i++)
             {
+
+                int positionIndex = -1;
                 positionIndex = this.getPositionIndexFromCar(Cars[i]);
 
                 //if first car is at last postion
@@ -1036,12 +1028,15 @@ namespace tracy
                 }
                 try
                 {
-                    if ((positionIndex + 7 + Cars[i].Speed) >= Positions.Length) { continue; }
+                    if ((positionIndex + 7 + Cars[i].Speed) >= Positions.Length)
+                    {
+                        continue;
+                    }
                 }
                 catch
                 {
-                    
-                    continue; 
+
+                    continue;
                 }
                 try
                 {
@@ -1073,14 +1068,14 @@ namespace tracy
                     {
                         //there is room, so move
                         MoveToNextPosition(i);
-                        
+
                         continue;
                     }
                 }
                 catch
                 {
-                    MoveToNextPosition(i); 
-                    continue; }
+                    MoveToNextPosition(i);
+                }
 
 
             }
@@ -1169,7 +1164,7 @@ namespace tracy
         public void SpawnCars(object obj, EventArgs args)
         {
             //if lane is not spawnable, or  is full, do nothing.
-            if (!this.spawnable || this.carLimit == this.Cars.Count)
+            if (!this.Spawnable || this.carLimit == this.Cars.Count)
             {
                 return;
             }
@@ -1235,12 +1230,12 @@ namespace tracy
 
         public void increaseSpawnTime()
         {
-            this.spawnTime += 500;
+            this.SpawnTime += 500;
         }
 
         public void decreaseSpawnTime()
         {
-            this.spawnTime -= 500;
+            this.SpawnTime -= 500;
         }
     }
 }

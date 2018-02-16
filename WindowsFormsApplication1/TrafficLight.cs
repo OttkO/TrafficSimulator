@@ -10,60 +10,45 @@ namespace tracy
     {
 
 
-        protected Point place;
-        protected int lightColor; // 1 = red , 2 = yellow ,  3 = green
-        protected int GreenInterval;
-        protected int RedInterval;
-        protected int timer;
-        protected bool colorChanged;
         protected Point Cplace;
 
-        public int greenInterval
+        public int GreenInterval
         {
-            get { return GreenInterval; }
-            set { GreenInterval = value; }
+            get;set;
         }
-        public int redInterval
+        public int RedInterval
         {
-            get { return RedInterval; }
-            set { RedInterval = value; }
+            get;set;
         }
         public int Timer
         {
-            get { return timer; }
-            set { timer = value; }
+            get;set;
         }
 
-        public Point position
+        public Point Position
         {
-
-            set { place = value; }
-            get { return place; }
+            get;set;
         }
 
         public Point CPost
         {
-            get { return Cplace; }
-            set { Cplace = value; }
+            get;set;
         }
 
         public void AdjustGreenTime(int greentime)
         {
-            if (Timer == 0)
+            
+            if (Timer == GreenInterval / 2)
             {
-                timer = 0;
-            }
-            else if (Timer == GreenInterval / 2)
-            {
-                timer = greentime / 2;
+                Timer = greentime / 2;
             }
             else if (Timer == GreenInterval * 2)
             {
-                timer = greentime * 2;
+                Timer = greentime * 2;
             }
             else if (Timer == GreenInterval)
             {
-                timer = greentime;
+                Timer = greentime;
             }
 
             if (RedInterval / GreenInterval == 3)
@@ -81,24 +66,22 @@ namespace tracy
 
         public TrafficLight(int greenINT, Point location)
         {
-            place = location;
-            lightColor = 1;
+            Position = location;
+            Colour = 1;
             GreenInterval = greenINT;
-            timer = 0;
+            Timer = 0;
             RedInterval = 0;
-            colorChanged = false;
+            ColorChanged = false;
         }
-
+        // 1 = red , 2 = yellow ,  3 = green
         public int Colour
         {
-            get { return this.lightColor; }
-            set { lightColor = value; }
+            get;set;
         }
 
         public bool ColorChanged
         {
-            get { return this.colorChanged; }
-            set { this.colorChanged = value; }
+            get;set;
         }
 
 
@@ -108,7 +91,7 @@ namespace tracy
 
         public virtual void IncTimer()
         {
-            this.timer++;
+            this.Timer++;
         }
     }
 
