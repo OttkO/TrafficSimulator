@@ -198,7 +198,7 @@ namespace tracy
 
         }
 
-        public void adjustGreenTime(Point coord, int time)
+        public void AdjustGreenTime(Point coord, int time)
         {
             int[] cell = getSpotNumber(coord);
             Road R = Roads[cell[0], cell[1]];
@@ -215,11 +215,7 @@ namespace tracy
             }
         }
 
-        //doesnt mean anything
-        public void ResetSim()
-        {
-            throw new System.NotImplementedException();
-        }
+ 
 
 
         /// <summary>
@@ -244,7 +240,7 @@ namespace tracy
             }
 
 
-            if (checkNeighbours(cellNumber, type, direction))
+            if (CheckNeighbours(cellNumber, type, direction))
             {
 
                 switch (type)
@@ -367,7 +363,7 @@ namespace tracy
         /// </summary>
         /// <param name="cellNumber"></param>
         /// <returns></returns>
-        public bool checkNeighbours(int[] cellNumber, string type, string direction)
+        public bool CheckNeighbours(int[] cellNumber, string type, string direction)
         {
 
             int[] North = new int[2];
