@@ -344,7 +344,7 @@ namespace tracy
                 string x = txtGrTime.Text;
                 if (Convert.ToInt32(x) >= 3)
                 {
-                    simu.adjustGreenTime(selected, Convert.ToInt32(x));
+                    simu.AdjustGreenTime(selected, Convert.ToInt32(x));
                     pbGrid.Controls.Remove(txtGrTime);
                     txtGrTime.Visible = false;
                 }

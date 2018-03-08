@@ -1,0 +1,47 @@
+﻿<Window x:Class="TrafficSimulatorWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrafficSimulatorWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Constants.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+           <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">
+            <TextBlock Text="Adjust Traffic Flow" HorizontalAlignment="Center"/>
+            <Slider />
+
+            <TextBlock Margin="0 8 0 0" Text="Adjust Traffic Speed" HorizontalAlignment="Center"/>
+            <Slider />
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom">
+            <Button Width="{StaticResource SettingsButtonWidth}" Height="75">
+                <Button.Background>
+                    <ImageBrush ImageSource="resources/playButton.jpg" />
+                </Button.Background>
+            </Button>
+            <Button Margin="8 0 0 0" Width="75" Height="75">
+                <Button.Background>
+                    <ImageBrush ImageSource="resources/trashButton.jpg" />
+                </Button.Background>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
