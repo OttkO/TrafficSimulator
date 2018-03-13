@@ -200,7 +200,7 @@ namespace TrafficSimulator
       {
         if (R is CCrossroad)
         {
-          ((CCrossroad)R).adjustGreenTime(time);
+          ((CCrossroad)R).AdjustGreenTime(time);
         }
         else if (R is PCrossroad)
         {

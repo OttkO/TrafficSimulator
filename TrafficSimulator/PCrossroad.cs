@@ -32,7 +32,7 @@ namespace TrafficSimulator
       //assign coordinates and images
       //creates list of lane and neighbours
       //Make all spawnable lane spawnable
-      image = Resource1.CrossP;
+      image = new Bitmap(@"Resources\CrossP.jpg");
       lanes = new List<Lane>();
       Coordinates = Coord;
 

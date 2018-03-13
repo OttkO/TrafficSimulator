@@ -23,7 +23,7 @@ namespace TrafficSimulator
       {
         case "H":
           {
-            image = Resource1.StraightH;
+            image = new Bitmap(@"Resources\StraightH.jpg");
             lanes.Add(new Lane(time, false, new Point(Coord.X + 150, Coord.Y + 60), new Point(Coord.X, Coord.Y + 60), "H"));
             lanes.Add(new Lane(time, false, new Point(Coord.X, Coord.Y + 85), new Point(Coord.X + 140, Coord.Y + 85), "H"));
 
@@ -31,7 +31,7 @@ namespace TrafficSimulator
           break;
         case "V":
           {
-            image = Resource1.StraightV;
+            image = new Bitmap(@"Resources\StraightV.jpg");
             lanes.Add(new Lane(time, false, new Point(Coord.X + 55, Coord.Y), new Point(Coord.X + 55, Coord.Y + 150), "V"));
             lanes.Add(new Lane(time, false, new Point(Coord.X + 80, Coord.Y + 150), new Point(Coord.X + 80, Coord.Y), "V"));
 

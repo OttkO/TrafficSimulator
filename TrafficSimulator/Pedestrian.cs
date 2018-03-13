@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using tracy;
 
 namespace TrafficSimulator
 {
@@ -13,7 +12,6 @@ namespace TrafficSimulator
     {
       // TODO: This is UI shit, and should not belong in here..
       // Brainstorm on how we can divide UI and data but still be able to test and work with our shit
-
       Graphics g = null; //= Tracy.bmGCars;
       g.Clear(Color.Transparent);
 

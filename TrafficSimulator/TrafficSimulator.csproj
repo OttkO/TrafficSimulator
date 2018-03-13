@@ -56,10 +56,109 @@
     <Compile Include="TrafficlightP.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WindowsFormsApplication1\TrafficLightSimulator.csproj">
-      <Project>{4C55202C-D84A-40B6-AE38-694A8E9BE0BA}</Project>
-      <Name>TrafficLightSimulator</Name>
-    </ProjectReference>
+    <None Include="Resources\CrossC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossCIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossPIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveNE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveNEIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveNW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveNWIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveSE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveSEIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveSW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveSWIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenWest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenNorth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenEast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenSouth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PedGreenEast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PedGreenWest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PedRedWest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PedRedEast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedNorth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedWest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedEast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedSouth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StraightH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StraightHIco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StraightV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StraightVIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowEast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowNorth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowWest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowSouth.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
