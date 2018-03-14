@@ -23,33 +23,33 @@ namespace TrafficSimulator
       direction = dir;
       this.lanes = new List<Lane>();
       this.DisableTimer();
-
+      
       switch (dir)
       {
         case "NE":
           {
-            image = new Bitmap(@"Resources\curveNE.jpg");
+            image = new Bitmap(Properties.Resources.curveNE);
             lanes.Add(new Lane(time, false, new Point(Coord.X + 150, Coord.Y + 65), new Point(Coord.X + 85, Coord.Y), direction));
             lanes.Add(new Lane(time, false, new Point(Coord.X + 65, Coord.Y), new Point(Coord.X + 150, Coord.Y + 85), direction));
           }
           break;
         case "SE":
           {
-            image = new Bitmap(@"Resources\curveSE.jpg");
+            image = new Bitmap(Properties.Resources.curveSE);
             lanes.Add(new Lane(time, false, new Point(Coord.X + 150, Coord.Y + 65), new Point(Coord.X + 65, Coord.Y + 150), direction));
             lanes.Add(new Lane(time, false, new Point(Coord.X + 85, Coord.Y + 150), new Point(Coord.X + 150, Coord.Y + 85), direction));
           }
           break;
         case "SW":
           {
-            image = new Bitmap(@"Resources\curveSW.jpg");
+            image = new Bitmap(Properties.Resources.curveSW);
             lanes.Add(new Lane(time, false, new Point(Coord.X, Coord.Y + 85), new Point(Coord.X + 65, Coord.Y + 150), direction));
             lanes.Add(new Lane(time, false, new Point(Coord.X + 85, Coord.Y + 150), new Point(Coord.X, Coord.Y + 35), direction));
           }
           break;
         case "NW":
           {
-            image = new Bitmap(@"Resources\curveNW.jpg");
+            image = new Bitmap(Properties.Resources.curveNW);
             lanes.Add(new Lane(time, false, new Point(Coord.X + 65, Coord.Y), new Point(Coord.X, Coord.Y + 65), direction));
             lanes.Add(new Lane(time, false, new Point(Coord.X, Coord.Y + 85), new Point(Coord.X + 85, Coord.Y), direction));
           }

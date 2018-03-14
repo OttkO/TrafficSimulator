@@ -52,7 +52,7 @@ namespace TrafficSimulator
       Spawnable = true;
 
       _spawnTimer = time;
-      _spawnTimer.Interval = SpawnTime;
+      SpawnTime = (int)_spawnTimer.Interval;
 
       _moveTimer = new Timer { Interval = 25 };
       _moveTimer.Elapsed += MoveCarsOnTimerElapsed;

@@ -48,6 +48,11 @@
     <Compile Include="PCrossroad.cs" />
     <Compile Include="Pedestrian.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Road.cs" />
     <Compile Include="Simulator.cs" />
     <Compile Include="StraightS.cs" />
@@ -56,109 +61,113 @@
     <Compile Include="TrafficlightP.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CrossC.jpg" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CrossC.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CrossCIcon.jpg" />
+    <EmbeddedResource Include="Resources\CrossCIcon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CrossP.jpg" />
+    <EmbeddedResource Include="Resources\CrossP.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CrossPIcon.jpg" />
+    <EmbeddedResource Include="Resources\CrossPIcon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\curveNE.jpg" />
+    <EmbeddedResource Include="Resources\curveNE.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\curveNEIcon.jpg" />
+    <EmbeddedResource Include="Resources\curveNEIcon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\curveNW.jpg" />
+    <EmbeddedResource Include="Resources\curveNW.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\curveNWIcon.jpg" />
+    <EmbeddedResource Include="Resources\curveNWIcon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\curveSE.jpg" />
+    <EmbeddedResource Include="Resources\curveSE.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\curveSEIcon.jpg" />
+    <EmbeddedResource Include="Resources\curveSEIcon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\curveSW.jpg" />
+    <EmbeddedResource Include="Resources\curveSW.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\curveSWIcon.jpg" />
+    <EmbeddedResource Include="Resources\curveSWIcon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\delete.jpg" />
+    <EmbeddedResource Include="Resources\delete.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenWest.png" />
+    <EmbeddedResource Include="Resources\GreenWest.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenNorth.png" />
+    <EmbeddedResource Include="Resources\GreenNorth.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenEast.png" />
+    <EmbeddedResource Include="Resources\GreenEast.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenSouth.png" />
+    <EmbeddedResource Include="Resources\GreenSouth.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PedGreenEast.png" />
+    <EmbeddedResource Include="Resources\PedGreenEast.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PedGreenWest.png" />
+    <EmbeddedResource Include="Resources\PedGreenWest.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PedRedWest.png" />
+    <EmbeddedResource Include="Resources\PedRedWest.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PedRedEast.png" />
+    <EmbeddedResource Include="Resources\PedRedEast.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedNorth.png" />
+    <EmbeddedResource Include="Resources\RedNorth.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedWest.png" />
+    <EmbeddedResource Include="Resources\RedWest.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedEast.png" />
+    <EmbeddedResource Include="Resources\RedEast.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedSouth.png" />
+    <EmbeddedResource Include="Resources\RedSouth.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Stop.png" />
+    <EmbeddedResource Include="Resources\Stop.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StraightH.jpg" />
+    <EmbeddedResource Include="Resources\StraightH.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StraightHIco.jpg" />
+    <EmbeddedResource Include="Resources\StraightHIco.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StraightV.jpg" />
+    <EmbeddedResource Include="Resources\StraightV.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StraightVIcon.jpg" />
+    <EmbeddedResource Include="Resources\StraightVIcon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Untitled-3.jpg" />
+    <EmbeddedResource Include="Resources\Untitled-3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\YellowEast.png" />
+    <EmbeddedResource Include="Resources\YellowEast.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\YellowNorth.png" />
+    <EmbeddedResource Include="Resources\YellowNorth.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\YellowWest.png" />
+    <EmbeddedResource Include="Resources\YellowWest.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\YellowSouth.png" />
+    <EmbeddedResource Include="Resources\YellowSouth.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,38 +19,38 @@ namespace TrafficSimulator
       {
         if (Position.X < Cplace.X + 75 && Position.Y < Cplace.Y + 75)
         {
-          g.DrawImage(new Bitmap(@"Resources\PedGreenWest.png"), Position.X, Position.Y, 20, 10);
+          g.DrawImage(new Bitmap(Properties.Resources.PedGreenWest), Position.X, Position.Y, 20, 10);
         }
         else if (Position.X > Cplace.X + 75 && Position.Y < Cplace.Y + 75)
         {
-          g.DrawImage(new Bitmap(@"Resources\PedGreenEast.png"), Position.X, Position.Y, 20, 10);
+          g.DrawImage(new Bitmap(Properties.Resources.PedGreenEast), Position.X, Position.Y, 20, 10);
         }
         else if (Position.X > Cplace.X + 75 && Position.Y > Cplace.Y + 75)
         {
-          g.DrawImage(new Bitmap(@"Resources\PedGreenEast.png"), Position.X, Position.Y, 20, 10);
+          g.DrawImage(new Bitmap(Properties.Resources.PedGreenEast), Position.X, Position.Y, 20, 10);
         }
         else if (Position.X < Cplace.X + 75 && Position.Y > Cplace.Y + 75)
         {
-          g.DrawImage(new Bitmap(@"Resources\PedGreenWest.png"), Position.X, Position.Y, 20, 10);
+          g.DrawImage(new Bitmap(Properties.Resources.PedGreenWest), Position.X, Position.Y, 20, 10);
         }
       }
       else
       {
         if (Position.X < Cplace.X + 75 && Position.Y < Cplace.Y + 75)
         {
-          g.DrawImage(new Bitmap(@"Resources\PedRedWest.png"), Position.X, Position.Y, 20, 10);
+          g.DrawImage(new Bitmap(Properties.Resources.PedRedWest), Position.X, Position.Y, 20, 10);
         }
         else if (Position.X > Cplace.X + 75 && Position.Y < Cplace.Y + 75)
         {
-          g.DrawImage(new Bitmap(@"Resources\PedRedEast.png"), Position.X, Position.Y, 20, 10);
+          g.DrawImage(new Bitmap(Properties.Resources.PedRedEast), Position.X, Position.Y, 20, 10);
         }
         else if (Position.X > Cplace.X + 75 && Position.Y > Cplace.Y + 75)
         {
-          g.DrawImage(new Bitmap(@"Resources\PedRedEast.png"), Position.X, Position.Y, 20, 10);
+          g.DrawImage(new Bitmap(Properties.Resources.PedRedEast), Position.X, Position.Y, 20, 10);
         }
         else if (Position.X < Cplace.X + 75 && Position.Y > Cplace.Y + 75)
         {
-          g.DrawImage(new Bitmap(@"Resources\PedRedWest.png"), Position.X, Position.Y, 20, 10);
+          g.DrawImage(new Bitmap(Properties.Resources.PedRedWest), Position.X, Position.Y, 20, 10);
         }
       }
     }

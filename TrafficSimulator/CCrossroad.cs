@@ -16,7 +16,7 @@ namespace TrafficSimulator
       //assign direction, coordinates and images
       //creates list of lane and neighbours
       //Make all spawnable lane spawnable
-      image = new Bitmap(@"Resources\CrossC.jpg");
+      image = new Bitmap(Properties.Resources.CrossC);
       lanes = new List<Lane>();
 
       DisableTimer();
