@@ -4,13 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrafficSimulatorWpf"
-        xmlns:data="clr-namespace:TrafficSimulator;assembly=TrafficSimulator..NETFramework,Version=v4.7.1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Constants.xaml"/>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -36,8 +36,8 @@
                 <!--<Button.Background>
                     <ImageBrush ImageSource="resources/playButton.jpg" />
                 </Button.Background>-->
-                <Button.Style>
-                    <Style>
+                <Button.Style >
+                    <Style TargetType="Button" BasedOn="{StaticResource EddysFuckedupButtonStyle}">
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding IsRunning}" Value="False">
                                 <Setter Property="Button.Background">
