@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrafficSimulatorWpf"
+        xmlns:data="clr-namespace:TrafficSimulator;assembly=TrafficSimulator..NETFramework,Version=v4.7"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
@@ -38,10 +39,19 @@
             </Button>
             <Button Margin="8 0 0 0" Width="75" Height="75">
                 <Button.Background>
+                    <!-- TODO: Images are stored in a different project. Get the image from that project -->
                     <ImageBrush ImageSource="resources/trashButton.jpg" />
                 </Button.Background>
             </Button>
         </StackPanel>
 
-    </Grid>
+    <ItemsControl ItemsSource="{Binding }" Grid.Column="1" Grid.RowSpan="2" Grid.Row="0">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Canvas />
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+    </ItemsControl>
+
+</Grid>
 </Window>
