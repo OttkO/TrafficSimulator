@@ -1184,23 +1184,12 @@ namespace TrafficSimulator
 
     }
 
-    public bool checkForCollisionCourse(Car aCar)
-    {
-      //check if there's a car in front
-      //check is speed,
-      //check my speed,
-      //will we collide?
-      //yes? Slow down.
-      //no? maintain speed.
-      return false;
-    }
-
-    public void increaseSpawnTime()
+     public void IncreaseSpawnTime()
     {
       this.SpawnTime += 500;
     }
 
-    public void decreaseSpawnTime()
+    public void DecreaseSpawnTime()
     {
       this.SpawnTime -= 500;
     }

@@ -4,13 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrafficSimulatorWpf"
-        xmlns:data="clr-namespace:TrafficSimulator;assembly=TrafficSimulator..NETFramework,Version=v4.7"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Constants.xaml"/>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -32,16 +32,46 @@
             <Slider />
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom">
-            <Button Width="{StaticResource SettingsButtonWidth}" Height="75">
-                <Button.Background>
+            <Button Width="{StaticResource SettingsButtonWidth}" Height="75" Command="{Binding PlayCommand}">
+                <!--<Button.Background>
                     <ImageBrush ImageSource="resources/playButton.jpg" />
-                </Button.Background>
+                </Button.Background>-->
+                <Button.Style >
+                    <Style TargetType="Button" BasedOn="{StaticResource EddysFuckedupButtonStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsRunning}" Value="False">
+                                <Setter Property="Button.Background">
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="resources/playButton.jpg" />
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding IsRunning}" Value="True">
+                                <Setter Property="Button.Background">
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="resources/stopButton.png" />
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
             </Button>
+
             <Button Margin="8 0 0 0" Width="75" Height="75">
-                <Button.Background>
-                    <!-- TODO: Images are stored in a different project. Get the image from that project -->
+                <!--<Button.Background>
+                    --><!-- TODO: Images are stored in a different project. Get the image from that project --><!--
                     <ImageBrush ImageSource="resources/trashButton.jpg" />
-                </Button.Background>
+                </Button.Background>--><!--
+                <Button.Triggers>
+                    <DataTrigger Binding="{Binding IsRunning}" Value="true">
+                        <Setter Property="Bac"></Setter>
+                    </DataTrigger>
+                </Button.Triggers>
+                <DataTrigger>
+
+                </DataTrigger>-->
+                
             </Button>
         </StackPanel>
 
