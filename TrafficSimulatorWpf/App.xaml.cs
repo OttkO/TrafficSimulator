@@ -17,8 +17,8 @@ namespace TrafficSimulatorWpf
     {
       base.OnStartup(e);
 
-      var mainWindow = new MainWindow();
-      var mainWindowViewModel = new MainWindowViewModel();
+      var mainWindow = new Tracy();
+      var mainWindowViewModel = new TracyViewModel();
 
       mainWindow.ViewModel = mainWindowViewModel;
       mainWindow.Show();
